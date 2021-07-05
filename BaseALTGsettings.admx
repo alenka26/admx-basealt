@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  (c) 2019 BaseALT, Ltd.  -->
+<policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
+  <policyNamespaces>
+    <target prefix="control" namespace="BaseALT.Policies.Control" />
+    <using prefix="system" namespace="BaseALT.Policies.System" />
+  </policyNamespaces>
+  <resources minRequiredRevision="1.0" />
+  <policies>
+
+<! -         org.mate.screensaver         ->
+
+    <policy name="idle-activation-enabled" class="User"
+            displayName="$(string.idle-activation-enabled)"
+            explainText="$(string.idle-activation-enabled_help)"
+            key="Software\Policies\Microsoft\Windows\Control Panel\Desktop"
+            valueName="ScreenSaveActive">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="lock-enabled" class="User"
+            displayName="$(string.lock-enabled)"
+            explainText="$(string.lock-enabled_help)"
+            key="Software\Policies\Microsoft\Windows\Control Panel\Desktop"
+            valueName="ScreenSaverIsSecure">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="botton-suspend" class="User"
+            displayName="$(string.botton-suspend)"
+            explainText="$(string.botton-suspend_help)"
+            key=""
+            >
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="botton-suspend_setter" required="true" valueName="botton-suspend">
+          <item displayName="$(string.botton-suspend_blank)">
+            <value>
+              <string>blank</string>
+            </value>
+          </item>
+          <item displayName="$(string.botton-suspend_suspend)">
+            <value>
+              <string>suspend</string>
+            </value>
+          </item>
+          <item displayName="$(string.botton-suspend_shutdown)">
+            <value>
+              <string>shutdown</string>
+            </value>
+          </item>
+          <item displayName="$(string.botton-suspend_hibernate)">
+            <value>
+              <string>hibernate</string>
+            </value>
+          </item>
+          <item displayName="$(string.botton-suspend_interactive)">
+            <value>
+              <string>interactive</string>
+            </value>
+          </item>
+          <item displayName="$(string.botton-suspend_nothing)">
+            <value>
+              <string>nothing</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="sleep-display-ac" class="Machine"
+            displayName="$(string.sleep-display-ac)"
+            explainText="$(string.sleep-display-ac_help)"
+            presentation="$(presentation.sleep-display-ac)"
+            key="System\CurrentControlSet\Control\Power\Timeouts">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+        <elements>
+        <decimal id="BattSuspendTimeoutSec" valueName="BattSuspendTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
+      </elements>
+    </policy>
+    <policy name="icon-policy" class="User"
+            displayName="$(string.icon-policy)"
+            explainText="$(string.icon-policy_help)"
+            key="">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="icon-policy_setter" required="true" valueName="icon-policy">
+          <item displayName="$(string.icon-policy_never)">
+            <value>
+              <string>never</string>
+            </value>
+          </item>
+          <item displayName="$(string.icon-policy_low)">
+            <value>
+              <string>low</string>
+            </value>
+          </item>
+          <item displayName="$(string.icon-policy_charge)">
+            <value>
+              <string>charge</string>
+            </value>
+          </item>
+          <item displayName="$(string.icon-policy_present)">
+            <value>
+              <string>present</string>
+            </value>
+          </item>
+          <item displayName="$(string.icon-policy_always)">
+            <value>
+              <string>always</string>
+            </value>
+          </item>
+    </policy>
+
+
+
+<! -          org.mate.session         ->
+
+    <policy name="idle-delay" class="User"
+            displayName="$(string.idle-delay)"
+            explainText="$(string.idle-delay_help)"
+            presentation="$(presentation.idle-delay)"
+            key="Software\Policies\Microsoft\Windows\Control Panel\Desktop">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+        <elements>
+        <decimal id="ScreenSaverTimeOutFreqSpin" valueName="ScreenSaveTimeOut" maxValue="599940" storeAsText="true" />
+      </elements>
+    </policy>
+
+<! -          org.mate.background         ->
+
+	    <policy name="Wallpaper" class="User" displayName="$(string.Wallpaper)" explainText="$(string.Wallpaper_Help)" presentation="$(presentation.Wallpaper)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <text id="WallpaperName" valueName="Wallpaper" required="true" />
+        <enum id="WallpaperStyle" valueName="WallpaperStyle" required="true">
+          <item displayName="$(string.WallpaperStyle_Center)">
+            <value>
+              <string>0</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Tile)">
+            <value>
+              <string>1</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Stretch)">
+            <value>
+              <string>2</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_KeepAspect)">
+            <value>
+              <string>3</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_CropToFit)">
+            <value>
+              <string>4</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+
+
+<! -          org.gnome.Vino         ->
+
+    <policy name="promt-enabled" class="User"
+            displayName="$(string.promt-enabled)"
+            explainText="$(string.promt-enabled_help)"
+            key="">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+
+<! -          org.mate.panel.toplevel         ->
+
+
+    <policy name="orientation" class="User"
+            displayName="$(string.orientation)"
+            explainText="$(string.orientation_help)"
+            key="">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="orientation_setter" required="true" valueName="orientation">
+          <item displayName="$(string.orientation_top)">
+            <value>
+              <string>top</string>
+            </value>
+          </item>
+          <item displayName="$(string.orientation_bottom)">
+            <value>
+              <string>bottom</string>
+            </value>
+          </item>
+    </policy>
+    <policy name="view-only" class="User"
+            displayName="$(string.view-only)"
+            explainText="$(string.view-only_help)"
+            key="">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="enabled" class="User"
+            displayName="$(string.enabled)"
+            explainText="$(string.enabled_help)"
+            key="">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    <policy name="icon-visibility" class="User"
+            displayName="$(string.icon-visibility)"
+            explainText="$(string.icon-visibility_help)"
+            key="">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="icon-visibility_setter" required="true" valueName="icon-visibility">
+          <item displayName="$(string.icon-visibility_client)">
+            <value>
+              <string>client</string>
+            </value>
+          </item>
+          <item displayName="$(string.icon-visibility_always)">
+            <value>
+              <string>client</string>
+            </value>
+          </item>
+          <item displayName="$(string.icon-visibility_never)">
+            <value>
+              <string>client</string>
+            </value>
+          </item>
+    </policy>
+    <policy name="botton-power" class="User"
+            displayName="$(string.botton-power)"
+            explainText="$(string.botton-power_help)"
+            key=""
+            >
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="botton-power_setter" required="true" valueName="botton-power">
+          <item displayName="$(string.botton-power_nothing)">
+            <value>
+              <string>nothing</string>
+            </value>
+          </item>
+          <item displayName="$(string.botton-power_suspend)">
+            <value>
+              <string>suspend</string>
+            </value>
+          </item>
+          <item displayName="$(string.botton-power_hibernate)">
+            <value>
+              <string>hibernate</string>
+            </value>
+          </item>
+          <item displayName="$(string.botton-power_shutdown)">
+            <value>
+              <string>shutdown</string>
+            </value>
+          </item>
+          <item displayName="$(string.botton-power_interactive)">
+            <value>
+              <string>interactive</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+    <policy name="mode" class="User"
+            displayName="$(string.mode)"
+            explainText="$(string.mode_help)"
+            key=""
+            >
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="mode_setter" required="true" valueName="mode">
+          <item displayName="$(string.mode_blank_only)">
+            <value>
+              <string>blank_only</string>
+            </value>
+          </item>
+          <item displayName="$(string.mode_random)">
+            <value>
+              <string>random</string>
+            </value>
+          </item>
+          <item displayName="$(string.mode_single)">
+            <value>
+              <string>single</string>
+            </value>
+          </item>
+    <policy name="use-upnp" class="User"
+            displayName="$(string.use-upnp)"
+            explainText="$(string.use-upnp_help)"
+            key="">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+
+
+
+  </policies>
+</policyDefinitions>
