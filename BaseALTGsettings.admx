@@ -38,41 +38,101 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    <policy name="botton-suspend" class="User"
-            displayName="$(string.botton-suspend)"
-            explainText="$(string.botton-suspend_help)"
+    
+    <policy	name="lock-delay" class="User"
+        displayName="$(string.lock-delay)"
+        explainText="$(string.lock-delay_help)"
+        key="">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+	<decimal id="ScreenSaverTimeLock" valueName="ScreenSaveLockTime" maxValue="2147483647" storeAsText="true" />
+    </elements>
+    </policy>
+    
+    <policy name="logout-delay" class="User"
+        displayName="$(string.logout-delay)"
+        explainText="$(string.logout-delay_help)"
+        key="">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+	<decimal id="ScreenSaverLogoutDelay" valueName="ScreenSaverDelayLogout" maxValue="2147483647" storeAsText="true" />
+    </elements>
+    </policy>
+    
+    <policy name="cycle-delay" class="User"
+        displayName="$(string.cycle-delay)"
+        explainText="$(string.cycle-delay_help)"
+        key="">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+	<decimal id="ScreenSaverCycleDelay" valueName="ScreenSaverDelayCycle" maxValue="2147483647" storeAsText="true" />
+    </elements>
+    </policy>
+    
+    <policy name="embedded-keyboard-command" class="User"
+        displayName="$(string.embedded-keyboard-command)"
+        explainText="$(string.embedded-keyboard-command_help)"
+        key="">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+	<string id="EmbeddedKeyboardCommand" valueName="EmbeddedCommandKeyboard" />
+    </elements>
+    </policy>
+    
+    <policy name="power-management-delay" class="User"
+	displayName="$(string.power-management-delay)"
+	explainText="$(string.power-management-delay_help)"
+	key="">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+	<decimal id="ScreenSaverUserIdle" valueName="ScreenSaverIdleUser" maxValue="2147483647" storeAsText="true" />
+    </elements>	
+    </policy>
+
+
+    
+    
+<! -		org.mate.power-manager		->
+    <policy name="button-suspend" class="User"
+            displayName="$(string.button-suspend)"
+            explainText="$(string.button-suspend_help)"
             key=""
             >
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="botton-suspend_setter" required="true" valueName="botton-suspend">
-          <item displayName="$(string.botton-suspend_blank)">
+        <enum id="button-suspend_setter" required="true" valueName="button-suspend">
+          <item displayName="$(string.button-suspend_blank)">
             <value>
               <string>blank</string>
             </value>
           </item>
-          <item displayName="$(string.botton-suspend_suspend)">
+          <item displayName="$(string.button-suspend_suspend)">
             <value>
               <string>suspend</string>
             </value>
           </item>
-          <item displayName="$(string.botton-suspend_shutdown)">
+          <item displayName="$(string.button-suspend_shutdown)">
             <value>
               <string>shutdown</string>
             </value>
           </item>
-          <item displayName="$(string.botton-suspend_hibernate)">
+          <item displayName="$(string.button-suspend_hibernate)">
             <value>
               <string>hibernate</string>
             </value>
           </item>
-          <item displayName="$(string.botton-suspend_interactive)">
+          <item displayName="$(string.button-suspend_interactive)">
             <value>
               <string>interactive</string>
             </value>
           </item>
-          <item displayName="$(string.botton-suspend_nothing)">
+          <item displayName="$(string.button-suspend_nothing)">
             <value>
               <string>nothing</string>
             </value>
@@ -268,36 +328,36 @@
             </value>
           </item>
     </policy>
-    <policy name="botton-power" class="User"
-            displayName="$(string.botton-power)"
-            explainText="$(string.botton-power_help)"
+    <policy name="button-power" class="User"
+            displayName="$(string.button-power)"
+            explainText="$(string.button-power_help)"
             key=""
             >
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="botton-power_setter" required="true" valueName="botton-power">
-          <item displayName="$(string.botton-power_nothing)">
+        <enum id="botton-power_setter" required="true" valueName="button-power">
+          <item displayName="$(string.button-power_nothing)">
             <value>
               <string>nothing</string>
             </value>
           </item>
-          <item displayName="$(string.botton-power_suspend)">
+          <item displayName="$(string.button-power_suspend)">
             <value>
               <string>suspend</string>
             </value>
           </item>
-          <item displayName="$(string.botton-power_hibernate)">
+          <item displayName="$(string.button-power_hibernate)">
             <value>
               <string>hibernate</string>
             </value>
           </item>
-          <item displayName="$(string.botton-power_shutdown)">
+          <item displayName="$(string.button-power_shutdown)">
             <value>
               <string>shutdown</string>
             </value>
           </item>
-          <item displayName="$(string.botton-power_interactive)">
+          <item displayName="$(string.button-power_interactive)">
             <value>
               <string>interactive</string>
             </value>
@@ -342,7 +402,6 @@
         <string>0</string>
       </disabledValue>
     </policy>
-
 
 
   </policies>
