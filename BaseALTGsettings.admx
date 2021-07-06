@@ -99,6 +99,35 @@
     
     
 <! -		org.mate.power-manager		->
+
+    <policy name="lock-hibernate" class="User"
+            displayName="$(string.lock-hibernate)"
+            explainText="$(string.lock-hibernate_help)"
+            key="">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    
+    <policy name="sleep-computer-ac" class="Machine"
+            displayName="$(string.sleep-computer-ac)"
+            explainText="$(string.sleep-computer-ac_help)"
+            presentation="$(presentation.sleep-computer-ac)"
+            key="System\CurrentControlSet\Control\Power\Timeouts">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+        <elements>
+        <decimal id="AcSleepTimeoutSec" valueName="AcSleepTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
+      </elements>
+    </policy>
+
+
+
     <policy name="button-suspend" class="User"
             displayName="$(string.button-suspend)"
             explainText="$(string.button-suspend_help)"
@@ -404,6 +433,33 @@
       </disabledValue>
     </policy>
 
+    <! -          org.mate.Marco.general         ->
+....
+    <policy name="num-workspaces" class="User"
+        displayName="$(string.num-workespaces)"
+        explainText="$(string.num-workspaces_help)"
+        key="">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+<------><decimal id="NumWorkspaces" valueName="WorkSpacesNum" minValue="1" maxValue="36" store
+    </elements>
+    </policy>
+....
+    <policy name="visual-bell" class="User"
+            displayName="$(string.visual-bell)"
+            explainText="$(string.visual-bell_help)"
+            key="">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
 
+    
   </policies>
 </policyDefinitions>
