@@ -10,26 +10,35 @@
 
 <! -         org.mate.screensaver         ->
 
+    <policy name="cycle-delay" class="User"
+        displayName="$(string.cycle-delay)"
+        explainText="$(string.cycle-delay_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.screensaver"
+        valueName="cycle-delay">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+	    <decimal id="ScreenSaverCycleDelay" valueName="ScreenSaverDelayCycle" minValue="0" maxValue="2147483647" storeAsText="true" />
+    </elements>
+    </policy>
+    
+    <policy name="embedded-keyboard-command" class="User"
+        displayName="$(string.embedded-keyboard-command)"
+        explainText="$(string.embedded-keyboard-command_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.screensaver"
+        valueName="embedded-keyboard-command">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+        <text id="EmbeddedKeyboardCommand" valueName="EmbeddedCommandKeyboard" />
+    </elements>
+    </policy>
+    
     <policy name="idle-activation-enabled" class="User"
             displayName="$(string.idle-activation-enabled)"
             explainText="$(string.idle-activation-enabled_help)"
             key="Software\Policies\Microsoft\Windows\Control Panel\Desktop"
             valueName="ScreenSaveActive">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <enabledValue>
-        <string>1</string>
-      </enabledValue>
-      <disabledValue>
-        <string>0</string>
-      </disabledValue>
-    </policy>
-
-    <policy name="lock-enabled" class="User"
-            displayName="$(string.lock-enabled)"
-            explainText="$(string.lock-enabled_help)"
-            key="Software\Policies\Microsoft\Windows\Control Panel\Desktop"
-            valueName="ScreenSaverIsSecure">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -48,8 +57,23 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	<decimal id="ScreenSaverTimeLock" valueName="ScreenSaveLockTime" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="ScreenSaverTimeLock" valueName="ScreenSaveLockTime" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
+    </policy>
+
+    <policy name="lock-enabled" class="User"
+            displayName="$(string.lock-enabled)"
+            explainText="$(string.lock-enabled_help)"
+            key="Software\Policies\Microsoft\Windows\Control Panel\Desktop"
+            valueName="ScreenSaverIsSecure">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
     </policy>
 
     <policy name="logout-delay" class="User"
@@ -60,31 +84,7 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	<decimal id="ScreenSaverLogoutDelay" valueName="ScreenSaverDelayLogout" minValue="0" maxValue="2147483647" storeAsText="true" />
-    </elements>
-    </policy>
-    
-    <policy name="cycle-delay" class="User"
-        displayName="$(string.cycle-delay)"
-        explainText="$(string.cycle-delay_help)"
-        key="Software\Policies\BaseALT\gsettings\org.mate.screensaver"
-        valueName="cycle-delay">
-    <parentCategory ref="system:ALT_Graphics" />
-    <supportedOn ref="system:SUPPORTED_AltP9" />
-    <elements>
-	<decimal id="ScreenSaverCycleDelay" valueName="ScreenSaverDelayCycle" minValue="0" maxValue="2147483647" storeAsText="true" />
-    </elements>
-    </policy>
-    
-    <policy name="embedded-keyboard-command" class="User"
-        displayName="$(string.embedded-keyboard-command)"
-        explainText="$(string.embedded-keyboard-command_help)"
-        key="Software\Policies\BaseALT\gsettings\org.mate.screensaver"
-        valueName="embedded-keyboard-command">
-    <parentCategory ref="system:ALT_Graphics" />
-    <supportedOn ref="system:SUPPORTED_AltP9" />
-    <elements>
-    <text id="EmbeddedKeyboardCommand" valueName="EmbeddedCommandKeyboard" />
+	    <decimal id="ScreenSaverLogoutDelay" valueName="ScreenSaverDelayLogout" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
     
@@ -96,46 +96,55 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	<decimal id="ScreenSaverUserIdle" valueName="ScreenSaverIdleUser" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="ScreenSaverUserIdle" valueName="ScreenSaverIdleUser" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>	
     </policy>
-    
-    
+
 <! -		org.mate.power-manager		->
 
-    <policy name="lock-hibernate" class="User"
-            displayName="$(string.lock-hibernate)"
-            explainText="$(string.lock-hibernate_help)"
-            key="">
+    <policy name="button-power" class="User"
+        displayName="$(string.button-power)"
+        explainText="$(string.button-power_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.power-manager"
+        valueName="button-power">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
-      <enabledValue>
-        <string>1</string>
-      </enabledValue>
-      <disabledValue>
-        <string>0</string>
-      </disabledValue>
-    </policy>
-    
-    <policy name="sleep-computer-ac" class="Machine"
-            displayName="$(string.sleep-computer-ac)"
-            explainText="$(string.sleep-computer-ac_help)"
-            presentation="$(presentation.sleep-computer-ac)"
-            key="System\CurrentControlSet\Control\Power\Timeouts">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-        <elements>
-        <decimal id="AcSleepTimeoutSec" valueName="AcSleepTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
+      <elements>
+        <enum id="button-power_setter" required="true" valueName="button-power">
+          <item displayName="$(string.button-power_nothing)">
+            <value>
+              <string>nothing</string>
+            </value>
+          </item>
+          <item displayName="$(string.button-power_suspend)">
+            <value>
+              <string>suspend</string>
+            </value>
+          </item>
+          <item displayName="$(string.button-power_hibernate)">
+            <value>
+              <string>hibernate</string>
+            </value>
+          </item>
+          <item displayName="$(string.button-power_shutdown)">
+            <value>
+              <string>shutdown</string>
+            </value>
+          </item>
+          <item displayName="$(string.button-power_interactive)">
+            <value>
+              <string>interactive</string>
+            </value>
+          </item>
+        </enum>
       </elements>
     </policy>
 
-
-
     <policy name="button-suspend" class="User"
-            displayName="$(string.button-suspend)"
-            explainText="$(string.button-suspend_help)"
-            key=""
-            >
+        displayName="$(string.button-suspend)"
+        explainText="$(string.button-suspend_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.power-manager"
+        valueName="button-suspend">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -173,21 +182,12 @@
         </enum>
       </elements>
     </policy>
-    <policy name="sleep-display-ac" class="Machine"
-            displayName="$(string.sleep-display-ac)"
-            explainText="$(string.sleep-display-ac_help)"
-            presentation="$(presentation.sleep-display-ac)"
-            key="System\CurrentControlSet\Control\Power\Timeouts">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-        <elements>
-        <decimal id="BattSuspendTimeoutSec" valueName="BattSuspendTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
-      </elements>
-    </policy>
+
     <policy name="icon-policy" class="User"
-            displayName="$(string.icon-policy)"
-            explainText="$(string.icon-policy_help)"
-            key="">
+        displayName="$(string.icon-policy)"
+        explainText="$(string.icon-policy_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.power-manager"
+        valueName="icon-policy">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -219,12 +219,51 @@
           </item>
     </policy>
 
+    <policy name="lock-hibernate" class="User"
+        displayName="$(string.lock-hibernate)"
+        explainText="$(string.lock-hibernate_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.power-manager"
+        valueName="lock-hibernate">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+    
+    <policy name="sleep-computer-ac" class="Machine"
+        displayName="$(string.sleep-computer-ac)"
+        explainText="$(string.sleep-computer-ac_help)"
+        presentation="$(presentation.sleep-computer-ac)"
+        key="System\CurrentControlSet\Control\Power\Timeouts"
+        >
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <decimal id="AcSleepTimeoutSec" valueName="AcSleepTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
+      </elements>
+    </policy>
 
+    <policy name="sleep-display-ac" class="Machine"
+        displayName="$(string.sleep-display-ac)"
+        explainText="$(string.sleep-display-ac_help)"
+        presentation="$(presentation.sleep-display-ac)"
+        key="System\CurrentControlSet\Control\Power\Timeouts"
+        >
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <decimal id="BattSuspendTimeoutSec" valueName="BattSuspendTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
+      </elements>
+    </policy>
 
 <! -          org.mate.session         ->
 
     <policy name="idle-delay" class="User"
-            displayName="$(string.idle-delay)"
+        displayName="$(string.idle-delay)"
             explainText="$(string.idle-delay_help)"
             presentation="$(presentation.idle-delay)"
             key="Software\Policies\Microsoft\Windows\Control Panel\Desktop">
