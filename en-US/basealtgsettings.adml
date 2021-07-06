@@ -125,6 +125,20 @@ False - отключить блокировку компьютера при во
       <string id="visual-bell_help"> </string>
       
     </stringTable>
+
+    <presentationTable>
+      <presentation id="at">
+        <dropdownList noSort="true" defaultItem="0" refId="at_setter">Who is allowed to run:
+        </dropdownList>
+      </presentation>
+      <presentation id="chage">
+        <dropdownList noSort="true" defaultItem="1" refId="chage_setter">Who is allowed to execute:
+        </dropdownList>
+      </presentation>
+      <presentation id="chfn">
+        <dropdownList noSort="true" defaultItem="1" refId="chfn_setter">Who can use:
+        </dropdownList>
+      </presentation>
+     </presentationTable>
   </resources>
 </policyDefinitionResources>
-
