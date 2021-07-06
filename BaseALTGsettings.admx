@@ -2,7 +2,7 @@
 <!--  (c) 2019 BaseALT, Ltd.  -->
 <policyDefinitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" revision="1.0" schemaVersion="1.0" xmlns="http://schemas.microsoft.com/GroupPolicy/2006/07/PolicyDefinitions">
   <policyNamespaces>
-    <target prefix="control" namespace="BaseALT.Policies.Control" />
+    <target prefix="gsettings" namespace="BaseALT.Policies.Gsettings" />
     <using prefix="system" namespace="BaseALT.Policies.System" />
   </policyNamespaces>
   <resources minRequiredRevision="1.0" />
@@ -42,7 +42,8 @@
     <policy	name="lock-delay" class="User"
         displayName="$(string.lock-delay)"
         explainText="$(string.lock-delay_help)"
-        key="">
+        key="Software\Policies\BaseALT\gsettings\org.mate.screensaver"
+        valueName="lock-delay">
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
