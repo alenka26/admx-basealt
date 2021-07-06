@@ -12,6 +12,13 @@ True - хранитель экрана включается, когда сеан
 
 False - хранитель экрана отключен
       </string>
+      <string id="lock-enabled">Возможность выхода из системы при включенном хранителе экрана</string>
+      <sting id="lock-enabled_help">Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась возможность выхода из системы 
+      </string>
+      <sting id="button-suspend"> Действие, выполняемое при нажатой кнопке ждущего режима.</string>
+      <sting id="button-suspend_help"> blank - !!!ничего не делать, suspend - переход в спящий режим,
+      shutdown - выключение компьютера, hibernate - переход в режим гибернации, interactive - спросить, 
+      что необходимо сделать, nothing - ничего не делать</string>
     </stringTable>
   </resources>
 </policyDefinitionResources>
