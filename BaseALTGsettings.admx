@@ -24,6 +24,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
+
     <policy name="lock-enabled" class="User"
             displayName="$(string.lock-enabled)"
             explainText="$(string.lock-enabled_help)"
@@ -38,7 +39,7 @@
         <string>0</string>
       </disabledValue>
     </policy>
-    
+
     <policy	name="lock-delay" class="User"
         displayName="$(string.lock-delay)"
         explainText="$(string.lock-delay_help)"
@@ -47,55 +48,57 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	<decimal id="ScreenSaverTimeLock" valueName="ScreenSaveLockTime" maxValue="2147483647" storeAsText="true" />
+	<decimal id="ScreenSaverTimeLock" valueName="ScreenSaveLockTime" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
-    
+
     <policy name="logout-delay" class="User"
         displayName="$(string.logout-delay)"
         explainText="$(string.logout-delay_help)"
-        key="">
+        key="Software\Policies\BaseALT\gsettings\org.mate.screensaver"
+        valueName="logout-delay">
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	<decimal id="ScreenSaverLogoutDelay" valueName="ScreenSaverDelayLogout" maxValue="2147483647" storeAsText="true" />
+	<decimal id="ScreenSaverLogoutDelay" valueName="ScreenSaverDelayLogout" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
     
     <policy name="cycle-delay" class="User"
         displayName="$(string.cycle-delay)"
         explainText="$(string.cycle-delay_help)"
-        key="">
+        key="Software\Policies\BaseALT\gsettings\org.mate.screensaver"
+        valueName="cycle-delay">
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	<decimal id="ScreenSaverCycleDelay" valueName="ScreenSaverDelayCycle" maxValue="2147483647" storeAsText="true" />
+	<decimal id="ScreenSaverCycleDelay" valueName="ScreenSaverDelayCycle" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
     
     <policy name="embedded-keyboard-command" class="User"
         displayName="$(string.embedded-keyboard-command)"
         explainText="$(string.embedded-keyboard-command_help)"
-        key="">
+        key="Software\Policies\BaseALT\gsettings\org.mate.screensaver"
+        valueName="embedded-keyboard-command">
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	<string id="EmbeddedKeyboardCommand" valueName="EmbeddedCommandKeyboard" />
+    <text id="EmbeddedKeyboardCommand" valueName="EmbeddedCommandKeyboard" />
     </elements>
     </policy>
     
     <policy name="power-management-delay" class="User"
-	displayName="$(string.power-management-delay)"
-	explainText="$(string.power-management-delay_help)"
-	key="">
+	    displayName="$(string.power-management-delay)"
+	    explainText="$(string.power-management-delay_help)"
+	    key="Software\Policies\BaseALT\gsettings\org.mate.screensaver"
+        valueName="power-management-delay">
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	<decimal id="ScreenSaverUserIdle" valueName="ScreenSaverIdleUser" maxValue="2147483647" storeAsText="true" />
+	<decimal id="ScreenSaverUserIdle" valueName="ScreenSaverIdleUser" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>	
     </policy>
-
-
     
     
 <! -		org.mate.power-manager		->
