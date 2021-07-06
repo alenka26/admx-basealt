@@ -218,7 +218,7 @@
             </value>
           </item>
     </policy>
-
+ 
     <policy name="lock-hibernate" class="User"
         displayName="$(string.lock-hibernate)"
         explainText="$(string.lock-hibernate_help)"
@@ -332,7 +332,7 @@
       </disabledValue>
     </policy>
 
-	<policy name="icon-visibility" class="User"
+    <policy name="icon-visibility" class="User"
         displayName="$(string.icon-visibility)" 
         explainText="$(string.icon-visibility_Help)" 
         presentation="$(presentation.icon-visibility)" 
@@ -472,7 +472,7 @@
 
 <!--          org.mate.Marco.general         -->
 
-    <policy name="num-workspaces" class="User"
+      <policy name="num-workspaces" class="User"
         displayName="$(string.num-workespaces)"
         explainText="$(string.num-workspaces_help)"
         key="">
@@ -497,6 +497,6 @@
       </disabledValue>
     </policy>
 
-    
+
   </policies>
 </policyDefinitions>
