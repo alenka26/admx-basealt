@@ -125,5 +125,37 @@ False - отключить блокировку компьютера при во
       <string id="visual-bell_help"> </string>
 
     </stringTable>
+
+    <presentationTable>
+      <presentation id="button-power">
+        <dropdownList noSort="true" defaultItem="0" refId="button-power_setter">Выберите режим работы:
+        </dropdownList>
+      </presentation>
+      <presentation id="button-suspend">
+        <dropdownList noSort="true" defaultItem="0" refId="button-suspend_setter">Выберите режим работы:
+        </dropdownList>
+      </presentation>
+      <presentation id="icon-policy">
+        <dropdownList noSort="true" defaultItem="0" refId="icon-policy_setter">Выберите режим работы:
+        </dropdownList>
+      </presentation>
+      <presentation id="Wallpaper">
+        <dropdownList noSort="true" defaultItem="0" refId="Wallpaper_setter">Выберите режим работы:
+        </dropdownList>
+      </presentation>
+      <presentation id="icon-visibility">
+        <dropdownList noSort="true" defaultItem="0" refId="icon-visibility_setter">Выберите режим работы:
+        </dropdownList>
+      </presentation>
+      <presentation id="orientation">
+        <dropdownList noSort="true" defaultItem="0" refId="orientation_setter">Выберите режим работы:
+        </dropdownList>
+      </presentation>
+      <presentation id="mode">
+        <dropdownList noSort="true" defaultItem="0" refId="mode_setter">Выберите режим работы:
+        </dropdownList>
+      </presentation>
+     </presentationTable>
+
   </resources>
 </policyDefinitionResources>

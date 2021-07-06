@@ -127,16 +127,32 @@ False - отключить блокировку компьютера при во
     </stringTable>
 
     <presentationTable>
-      <presentation id="at">
-        <dropdownList noSort="true" defaultItem="0" refId="at_setter">Who is allowed to run:
+      <presentation id="button-power">
+        <dropdownList noSort="true" defaultItem="0" refId="button-power_setter">Select an operating mode:
         </dropdownList>
       </presentation>
-      <presentation id="chage">
-        <dropdownList noSort="true" defaultItem="1" refId="chage_setter">Who is allowed to execute:
+      <presentation id="button-suspend">
+        <dropdownList noSort="true" defaultItem="0" refId="button-suspend_setter">Select an operating mode:
         </dropdownList>
       </presentation>
-      <presentation id="chfn">
-        <dropdownList noSort="true" defaultItem="1" refId="chfn_setter">Who can use:
+      <presentation id="icon-policy">
+        <dropdownList noSort="true" defaultItem="0" refId="icon-policy_setter">Select an operating mode:
+        </dropdownList>
+      </presentation>
+      <presentation id="Wallpaper">
+        <dropdownList noSort="true" defaultItem="0" refId="Wallpaper_setter">Select an operating mode:
+        </dropdownList>
+      </presentation>
+      <presentation id="icon-visibility">
+        <dropdownList noSort="true" defaultItem="0" refId="icon-visibility_setter">Select an operating mode:
+        </dropdownList>
+      </presentation>
+      <presentation id="orientation">
+        <dropdownList noSort="true" defaultItem="0" refId="orientation_setter">Select an operating mode:
+        </dropdownList>
+      </presentation>
+      <presentation id="mode">
+        <dropdownList noSort="true" defaultItem="0" refId="mode_setter">Select an operating mode:
         </dropdownList>
       </presentation>
      </presentationTable>

@@ -106,7 +106,8 @@
         displayName="$(string.button-power)"
         explainText="$(string.button-power_help)"
         key="Software\Policies\BaseALT\gsettings\org.mate.power-manager"
-        valueName="button-power">
+        valueName="button-power"
+        presentation="$(presentation.button-power)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -144,7 +145,8 @@
         displayName="$(string.button-suspend)"
         explainText="$(string.button-suspend_help)"
         key="Software\Policies\BaseALT\gsettings\org.mate.power-manager"
-        valueName="button-suspend">
+        valueName="button-suspend"
+        presentation="$(presentation.button-suspend)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -187,7 +189,8 @@
         displayName="$(string.icon-policy)"
         explainText="$(string.icon-policy_help)"
         key="Software\Policies\BaseALT\gsettings\org.mate.power-manager"
-        valueName="icon-policy">
+        valueName="icon-policy"
+        presentation="$(presentation.icon-policy)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -278,9 +281,10 @@
 
 	<policy name="Wallpaper" class="User"
         displayName="$(string.Wallpaper)" 
-        explainText="$(string.Wallpaper_Help)" 
+        explainText="$(string.Wallpaper_help)" 
         presentation="$(presentation.Wallpaper)" 
-        key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
+        key="Software\Microsoft\Windows\CurrentVersion\Policies\System"
+        presentation="$(presentation.Wallpaper)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -334,9 +338,10 @@
 
     <policy name="icon-visibility" class="User"
         displayName="$(string.icon-visibility)" 
-        explainText="$(string.icon-visibility_Help)" 
+        explainText="$(string.icon-visibility_help)" 
         presentation="$(presentation.icon-visibility)" 
-        key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
+        key="Software\Microsoft\Windows\CurrentVersion\Policies\System"
+        presentation="$(presentation.icon-visibility)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -393,9 +398,10 @@
 <!--          org.mate.panel.toplevel         -->
 
     <policy name="orientation" class="User"
-            displayName="$(string.orientation)"
-            explainText="$(string.orientation_help)"
-            key="Software\Policies\BaseALT\gsettings\org.mate.panel.toplevel">
+        displayName="$(string.orientation)"
+        explainText="$(string.orientation_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.panel.toplevel"
+        presentation="$(presentation.orientation)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -416,10 +422,10 @@
 <!--          user.screensaver         -->
 
     <policy name="mode" class="User"
-            displayName="$(string.mode)"
-            explainText="$(string.mode_help)"
-            key="Software\Policies\BaseALT\gsettings\user.screensaver"
-            >
+        displayName="$(string.mode)"
+        explainText="$(string.mode_help)"
+        key="Software\Policies\BaseALT\gsettings\user.screensaver"
+        presentation="$(presentation.mode)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -472,21 +478,46 @@
 
 <!--          org.mate.Marco.general         -->
 
-      <policy name="num-workspaces" class="User"
+    <policy name="button-layout" class="User"
+        displayName="$(string.button-layout)"
+        explainText="$(string.button-layout_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.Marco.general"
+        valueName="button-layout">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <text id="button-layout" valueName="button-layout" />
+      </elements>
+      </policy>
+
+    <policy name="num-workspaces" class="User"
         displayName="$(string.num-workespaces)"
         explainText="$(string.num-workspaces_help)"
         key="">
-    <parentCategory ref="system:ALT_Graphics" />
-    <supportedOn ref="system:SUPPORTED_AltP9" />
-    <elements>
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
         <decimal id="NumWorkspaces" valueName="WorkSpacesNum" minValue="1" maxValue="36" store
-    </elements>
+      </elements>
     </policy>
 
+    <policy name="theme" class="User"
+        displayName="$(string.theme)"
+        explainText="$(string.theme_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.Marco.general"
+        valueName="theme">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <text id="theme" valueName="theme" />
+      </elements>
+      </policy>
+
     <policy name="visual-bell" class="User"
-            displayName="$(string.visual-bell)"
-            explainText="$(string.visual-bell_help)"
-            key="">
+        displayName="$(string.visual-bell)"
+        explainText="$(string.visual-bell_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.Marco.general"
+        valueName="visual-bell">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -497,6 +528,30 @@
       </disabledValue>
     </policy>
 
+<!--          org.mate.interface         -->
 
+    <policy name="gtk-theme" class="User"
+        displayName="$(string.gtk-theme)"
+        explainText="$(string.gtk-theme_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.interface"
+        valueName="gtk-theme">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <text id="gtk-theme" valueName="gtk-theme" />
+      </elements>
+      </policy>
+
+    <policy name="icon-theme" class="User"
+        displayName="$(string.icon-theme)"
+        explainText="$(string.icon-theme_help)"
+        key="Software\Policies\BaseALT\gsettings\org.mate.interface"
+        valueName="icon-theme">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <text id="icon-theme" valueName="icon-theme" />
+      </elements>
+      </policy>
   </policies>
 </policyDefinitions>
