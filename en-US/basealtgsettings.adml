@@ -13,26 +13,26 @@ True - хранитель экрана включается, когда сеан
 False - хранитель экрана отключен
       </string>
       <string id="lock-enabled">Возможность выхода из системы при включенном хранителе экрана</string>
-      <sting id="lock-enabled_help">Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась возможность выхода из системы 
+      <sting id="lock-enabled_help">Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась возможность выхода из системы.
       </string>
-      
+
       <string id="lock-delay"> Количество минут после активации хранителя экрана, по истечении которых экран будет заблокирован.</string>
       <string id="lock-delay_help"> Установите количество минут по истечении которых экран будет заблокирован</string>
-      
+
       <string id="logout-delay"> Интервал в минутах между активацией хранителя экрана и появлением параметра выхода из сеанса в диалоге</string>
       <string id="logout-delay_help"> Установите количество минут, через которое после активации хранителя экрана будет появляться диалог выхода из сеанса</string>
-      
+
       string id="cycle-delay"> Интервал между сменами тем хранителя экрана в минутах.</string>
       string id="cycle-delay_help"> Установите интервал в минутах между сменами тем хранителя экрана.</string>
-      
-      <string id="embedded-keyboard-command"> Команда, которая должна выполняться, если установлено значение TRUE для ключа «embedded_keyboard_enabled», 
+
+      <string id="embedded-keyboard-command"> Команда, которая должна выполняться, если установлено значение TRUE для ключа «embedded_keyboard_enabled»,.
       чтобы встроить виджет клавиатуры в окно. Команда должна реализовать интерфейс подключения XEMBED и выводить XID окна на стандартный вывод.</string>
       <string id="embedded-keyboard-command_help"> Введите команду, реализующую интерфейс подключения XEMBED и выводящую XID окна на стандартный вывод</string>
-      
+
       <string id="power-management-delay"> </string>
       <string id="power-management-delay_help"> </string>
-      
-      <string id="lock-hibernate"> Возможность блокировать экран после восстановления компьютера из спящего режима. Используется только в случае, если не 
+
+      <string id="lock-hibernate"> Возможность блокировать экран после восстановления компьютера из спящего режима. Используется только в случае, если не.
       установлен параметр lock-use-screensaver.</string>
       <string id="lock-hibernate_help"> Установите значение TRUE, чтобы блокировать компьютер после восстановления из спящего режима.
 
@@ -40,91 +40,90 @@ True - блокировать компьютер после восстановл
 
 False - отключить блокировку компьютера при восстановлении их спящего режима
 </string>
-	<string id="sleep-computer-ac"> Время бездействия в секундах, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
-	<string id="sleep-computer-ac_help"> Установите время бездействия компьютера, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
-	
-	<sting id="button-suspend"> Действие, выполняемое при нажатой кнопке ждущего режима.</string>
-	<sting id="button-suspend_help"> Установите действие, выполняемое при нажатии кнопки ждущего режима
-      
+    <string id="sleep-computer-ac"> Время бездействия в секундах, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
+    <string id="sleep-computer-ac_help"> Установите время бездействия компьютера, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
+
+    <sting id="button-suspend"> Действие, выполняемое при нажатой кнопке ждущего режима.</string>
+    <sting id="button-suspend_help"> Установите действие, выполняемое при нажатии кнопки ждущего режима
+
       blank - !!!ничего не делать, suspend - переход в спящий режим,
-      
-      shutdown - выключение компьютера, hibernate - переход в режим гибернации, 
-      
-      interactive - спросить, что необходимо сделать, 
+
+      shutdown - выключение компьютера, hibernate - переход в режим гибернации,
+
+      interactive - спросить, что необходимо сделать,
       
       nothing - ничего не делать</string>
-      
+
       <string id="sleep-display-ac">Время бездействия компьютера, по истечении которого, дисплей будет отключен при питании от сети</string>
       <string id="sleep-display-ac_help">Установите время бездействия в секундах, по истечении которого дисплей будет отключен при питании от сети </string>
-      
+
       <string id="icon-policy"> Опции для иконки уведомления</string>
       <string id="icon-policy_help"> В каких случаях показать уведомление о состоянии питания.
-      
+
       always - показывать уведомление всегда
-      
+
       present - показывать уведомление при питании от сети!!!
-      
+
       charge - показывать уведомление при зарядке батареи
-      
+
       low - показывать уведомление при низком заряде батареи
-      
+
       critical - показывать уведомление при критическом заряде батареи
-      
+
       never - никогда не показывать уведмление</string>
-      
+
       <string id="idle-delay"> !!!</string>
       <string id="idle-delay_help"> !!!</string>
-      
+
       <string id="Wallpaper"> !!!</string>
       <string id="Wallpaper_Help">!!!</string>
-      
-      <string id="promt-enabled"> If true, remote users accessing the desktop are not allowed access until the user on the host machine approves 
+
+      <string id="promt-enabled"> If true, remote users accessing the desktop are not allowed access until the user on the host machine approves.
       the connection. Recommended especially when access is not password protected.</string>
       <string id="promt-enabled_help"> !!!</string>
-      
-      <string id="orientation"> Список идентификаторов панелей. Каждый идентификатор соответствует своей отдельной панели верхнего уровня. 
+
+      <string id="orientation"> Список идентификаторов панелей. Каждый идентификатор соответствует своей отдельной панели верхнего уровня..
       Параметры каждой из этих панелей хранятся в /apps/panel/toplevels/$(id).</string>
       <string id="orientation_help"> !!!</string>
-      
-      <string id="view-only">If true, remote users accessing the desktop are only allowed to view the desktop. 
+
+      <string id="view-only">If true, remote users accessing the desktop are only allowed to view the desktop..
       Remote users will not be able to use the mouse or keyboard. </string>
       <string id="view-only_help"> !!!</string>
-      
-      <string id="enabled"> This key controls the behavior of the status icon. There are three options: "always" - the icon will always be present; 
+
+      <string id="enabled"> This key controls the behavior of the status icon. There are three options: "always" - the icon will always be present;.
       "client" - the icon will only be present when someone is connected (this is the default behavior); "never" - the icon will not be present</string>
       <string id="enabled_help"> </string>
-      
-      <string id="icon-visibility">This key controls the behavior of the status icon. There are three options: "always" - the icon will always be present; 
+
+      <string id="icon-visibility">This key controls the behavior of the status icon. There are three options: "always" - the icon will always be present;.
       "client" - the icon will only be present when someone is connected (this is the default behavior); "never" - the icon will not be present </string>
       <string id="icon-visibility_help"> </string>
-      
+
       <string id="button-power"> </string>
       <string id="button-power_help"> </string>
       
-      <string id="mode">Режим выбора, используемый хранителем экрана. Возможные варианты: «disabled» — отключён, «blank-only» — чёрный экран, 
+      <string id="mode">Режим выбора, используемый хранителем экрана. Возможные варианты: «disabled» — отключён, «blank-only» — чёрный экран,.
       «single» — использовать одну тему, указанную ключом «темы», «random» — использовать случайно выбранную тему.</string>
       <string id="mode_help"> Установить режим работы хранителя экрана.
-      
+
       diasabled - хранитель экрана отключен
-      
+
       blank-only - при активации хранителя экрана отображается черный экран
-      
+
       single - при активации хранителя экрана используется тема, указанная ключом "темы"
-      
+
       random - при активации хранителя экрана используется случайно выбранная тема</string>
-      
+
       <string id="use-upnp">If true, request that a UPnP-capable router should forward and open the port used by Vino.</string>
       <string id="use-upnp_help"> !!!!</string>
-      
+
       <string id="num-workespaces"> Количество рабочих областей.</string>
-      <string id="num-workspaces_help">Number of workspaces. Must be more than zero, and has a fixed maximum(36) to prevent making the desktop unusable by 
+      <string id="num-workspaces_help">Number of workspaces. Must be more than zero, and has a fixed maximum(36) to prevent making the desktop unusable by.
       accidentally asking for too many workspaces.</string>
-      
-      <string id="visual-bell">Turns on a visual indication when an application or the system issues a 'bell' or 'beep'; useful for the hard-of-hearing 
+
+      <string id="visual-bell">Turns on a visual indication when an application or the system issues a 'bell' or 'beep'; useful for the hard-of-hearing.
       and for use in noisy environments.</string>
       <string id="visual-bell_help"> </string>
-      
+
     </stringTable>
   </resources>
 </policyDefinitionResources>
-

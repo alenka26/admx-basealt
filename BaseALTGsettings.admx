@@ -8,7 +8,7 @@
   <resources minRequiredRevision="1.0" />
   <policies>
 
-<! -         org.mate.screensaver         ->
+<!--         org.mate.screensaver         -->
 
     <policy name="idle-activation-enabled" class="User"
             displayName="$(string.idle-activation-enabled)"
@@ -98,7 +98,7 @@
 
     
     
-<! -		org.mate.power-manager		->
+<!--		org.mate.power-manager		-->
 
     <policy name="lock-hibernate" class="User"
             displayName="$(string.lock-hibernate)"
@@ -218,7 +218,7 @@
 
 
 
-<! -          org.mate.session         ->
+<!--          org.mate.session         -->
 
     <policy name="idle-delay" class="User"
             displayName="$(string.idle-delay)"
@@ -232,7 +232,7 @@
       </elements>
     </policy>
 
-<! -          org.mate.background         ->
+<!--          org.mate.background        -->
 
 	    <policy name="Wallpaper" class="User" displayName="$(string.Wallpaper)" explainText="$(string.Wallpaper_Help)" presentation="$(presentation.Wallpaper)" key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
       <parentCategory ref="system:ALT_Graphics" />
@@ -270,7 +270,7 @@
     </policy>
 
 
-<! -          org.gnome.Vino         ->
+<!--          org.gnome.Vino        -->
 
     <policy name="promt-enabled" class="User"
             displayName="$(string.promt-enabled)"
@@ -286,7 +286,7 @@
       </disabledValue>
     </policy>
 
-<! -          org.mate.panel.toplevel         ->
+<!--          org.mate.panel.toplevel         -->
 
 
     <policy name="orientation" class="User"
@@ -433,8 +433,8 @@
       </disabledValue>
     </policy>
 
-    <! -          org.mate.Marco.general         ->
-....
+    <!--          org.mate.Marco.general        -->
+
     <policy name="num-workspaces" class="User"
         displayName="$(string.num-workespaces)"
         explainText="$(string.num-workspaces_help)"
@@ -442,10 +442,10 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-<------><decimal id="NumWorkspaces" valueName="WorkSpacesNum" minValue="1" maxValue="36" store
+    <decimal id="NumWorkspaces" valueName="WorkSpacesNum" minValue="1" maxValue="36" store
     </elements>
     </policy>
-....
+
     <policy name="visual-bell" class="User"
             displayName="$(string.visual-bell)"
             explainText="$(string.visual-bell_help)"
@@ -460,6 +460,6 @@
       </disabledValue>
     </policy>
 
-    
+
   </policies>
 </policyDefinitions>
