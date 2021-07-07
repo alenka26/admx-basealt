@@ -29,8 +29,8 @@ False - хранитель экрана отключен
       чтобы встроить виджет клавиатуры в окно. Команда должна реализовать интерфейс подключения XEMBED и выводить XID окна на стандартный вывод.</string>
       <string id="embedded-keyboard-command_help"> Введите команду, реализующую интерфейс подключения XEMBED и выводящую XID окна на стандартный вывод</string>
 
-      <string id="power-management-delay"> </string>
-      <string id="power-management-delay_help"> </string>
+      <string id="power-management-delay">!!!</string>
+      <string id="power-management-delay_help">!!!</string>
 
       <string id="lock-hibernate"> Возможность блокировать экран после восстановления компьютера из спящего режима. Используется только в случае, если не.
       установлен параметр lock-use-screensaver.</string>
@@ -171,31 +171,31 @@ False - отключить блокировку компьютера при во
     </stringTable>
 
     <presentationTable>
-	<presentation id="cycle-delay-pr">
+	<presentation id="OrgMateScreensaverCycleDelay-pr">
 		<text>Интервал в минутах между сменами тем хранителя экрана</text>
-		<decimalTextBox refId="ScreenSaverCycleDelay" defaultValue="2">Интервал смены тем хранителя в минутах</decimalTextBox>
+		<decimalTextBox refId="ScreenSaverCycleDelay_setter" defaultValue="2">Интервал смены тем хранителя в минутах</decimalTextBox>
 	</presentation>
 	
-	<presentation id="embedded-keyboard-command-pr">
+	<presentation id="OrgMateScreensaverEmbeddedKeyboardCommand-pr">
 		<text>Команда для встраивания виджета клавиатруы в окно</text>
-		<textBox refId="EmbeddedKeyboardCommand">
+		<textBox refId="EmbeddedKeyboardCommand_setter">
 			<label>Command: </label>
 		</textBox>
 	</presentation>
 
-	<presentation id="lock-delay-pr">
-		<text>Интервал в минутах между активацией хранителя экрана и появлением диалоге выхода из системы при активации</text>
-		<decimalTextBox refId="ScreenSaverTimeLock" defaultValue="2">Время в минутах</decimalTextBox>
+	<presentation id="OrgMateScreensaverLockDelayUser-pr">
+		<text>Интервал в минутах между активацией хранителя экрана и появлением диалога выхода из системы при активации</text>
+		<decimalTextBox refId="ScreenSaverTimeLock_setter" defaultValue="2">Время в минутах</decimalTextBox>
 	</presentation>
 
-	<presentation id="logout-delay-pr">
+	<presentation id="OrgMateScreensaverLogoutDelay-pr">
 		<text>Количество минут, по истечении которого после активации хранителя экрана, экран будет заблоктрован</text>
-		<decimalTextBox refId="ScreenSaverLogoutDelay" defaultValue="3">Время в минутах</decimalTextBox>
+		<decimalTextBox refId="logout-delay" defaultValue="3">Время в минутах</decimalTextBox>
 	</presentation>
 	
-	<presentation id="power-management-delay-pr">
+	<presentation id="OrgMateScreensaverPowerManagementDelay-pr">
 		<text>Время в секундах, по прошествии которого система управления питанием получает сигнал о бездействии пользователя</text>
-		<decimalTextBox refId="ScreenSaverUserIdle" defaultValue="180">Время в минутах</decimalTextBox>
+		<decimalTextBox refId="power-management-delay" defaultValue="180">Время в минутах</decimalTextBox>
 	</presentation>
 	
 	<presentation id="sleep-computer-ac-pr">
@@ -227,7 +227,7 @@ False - отключить блокировку компьютера при во
 	
 	<presentation id="num-workspaces">
 		<text>!!!</text>
-		<decimalTextBox refId="NumWorkspaces">!!!</decimalTextBox>
+		<decimalTextBox refId="num-workspaces_setter">!!!</decimalTextBox>
 	</presentation>
 	
 	<presentation id="theme">
