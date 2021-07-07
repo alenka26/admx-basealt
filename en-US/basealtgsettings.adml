@@ -13,7 +13,7 @@ True - хранитель экрана включается, когда сеан
 False - хранитель экрана отключен
       </string>
       <string id="lock-enabled">Возможность выхода из системы при включенном хранителе экрана</string>
-      <sting id="lock-enabled_help">Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась возможность выхода из системы.
+      <string id="lock-enabled_help">Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась возможность выхода из системы.
       </string>
 
       <string id="lock-delay"> Количество минут после активации хранителя экрана, по истечении которых экран будет заблокирован.</string>
@@ -22,8 +22,8 @@ False - хранитель экрана отключен
       <string id="logout-delay"> Интервал в минутах между активацией хранителя экрана и появлением параметра выхода из сеанса в диалоге</string>
       <string id="logout-delay_help"> Установите количество минут, через которое после активации хранителя экрана будет появляться диалог выхода из сеанса</string>
 
-      string id="cycle-delay"> Интервал между сменами тем хранителя экрана в минутах.</string>
-      string id="cycle-delay_help"> Установите интервал в минутах между сменами тем хранителя экрана.</string>
+      <string id="cycle-delay"> Интервал между сменами тем хранителя экрана в минутах.</string>
+      <string id="cycle-delay_help"> Установите интервал в минутах между сменами тем хранителя экрана.</string>
 
       <string id="embedded-keyboard-command"> Команда, которая должна выполняться, если установлено значение TRUE для ключа «embedded_keyboard_enabled»,.
       чтобы встроить виджет клавиатуры в окно. Команда должна реализовать интерфейс подключения XEMBED и выводить XID окна на стандартный вывод.</string>
@@ -43,8 +43,8 @@ False - отключить блокировку компьютера при во
     <string id="sleep-computer-ac"> Время бездействия в секундах, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
     <string id="sleep-computer-ac_help"> Установите время бездействия компьютера, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
 
-    <sting id="button-suspend"> Действие, выполняемое при нажатой кнопке ждущего режима.</string>
-    <sting id="button-suspend_help"> Установите действие, выполняемое при нажатии кнопки ждущего режима
+    <string id="button-suspend"> Действие, выполняемое при нажатой кнопке ждущего режима.</string>
+    <string id="button-suspend_help"> Установите действие, выполняемое при нажатии кнопки ждущего режима
 
       blank - !!!ничего не делать, suspend - переход в спящий режим,
 
@@ -53,6 +53,12 @@ False - отключить блокировку компьютера при во
       interactive - спросить, что необходимо сделать,
       
       nothing - ничего не делать</string>
+	<string id="button-suspend_blank">Черный экран</string>
+	<string id="button-suspend_suspend">спящий режим</string>
+	<string id="button-suspend_shutdown">выключение</string>
+	<string id="button-suspend_hibernate">гибернация</string>
+	<string id="button-suspend_interactive">спросить</string>
+	<string id="button-suspend_nothing">ничего не делать</string>
 
       <string id="sleep-display-ac">Время бездействия компьютера, по истечении которого, дисплей будет отключен при питании от сети</string>
       <string id="sleep-display-ac_help">Установите время бездействия в секундах, по истечении которого дисплей будет отключен при питании от сети </string>
@@ -71,12 +77,22 @@ False - отключить блокировку компьютера при во
       critical - показывать уведомление при критическом заряде батареи
 
       never - никогда не показывать уведмление</string>
+	<string id="icon-policy_never">никогда</string>
+	<string id="icon-policy_low">при низком заряде</string>
+	<string id="icon-policy_charge">при зарядке</string>
+	<string id="icon-policy_present">при питании от сети</string>
+	<string id="icon-policy_always">всегда</string>
 
       <string id="idle-delay"> !!!</string>
       <string id="idle-delay_help"> !!!</string>
 
       <string id="Wallpaper"> !!!</string>
-      <string id="Wallpaper_Help">!!!</string>
+      <string id="Wallpaper_help">!!!</string>
+	<string id= "WallpaperStyle_Center">!!!</string>
+	<string id= "WallpaperStyle_Tile">!!!</string>
+	<string id= "WallpaperStyle_Stretch"></string>
+	<string id= "WallpaperStyle_KeepAspect"></string>
+	<string id= "WallpaperStyle_CropToFit"></string>
 
       <string id="promt-enabled"> If true, remote users accessing the desktop are not allowed access until the user on the host machine approves.
       the connection. Recommended especially when access is not password protected.</string>
@@ -85,6 +101,8 @@ False - отключить блокировку компьютера при во
       <string id="orientation"> Список идентификаторов панелей. Каждый идентификатор соответствует своей отдельной панели верхнего уровня..
       Параметры каждой из этих панелей хранятся в /apps/panel/toplevels/$(id).</string>
       <string id="orientation_help"> !!!</string>
+	<string id="orientation_top">!!!!</string>
+	<string id="orientation_bottom">!!!!!</string>
 
       <string id="view-only">If true, remote users accessing the desktop are only allowed to view the desktop..
       Remote users will not be able to use the mouse or keyboard. </string>
@@ -96,10 +114,18 @@ False - отключить блокировку компьютера при во
 
       <string id="icon-visibility">This key controls the behavior of the status icon. There are three options: "always" - the icon will always be present;.
       "client" - the icon will only be present when someone is connected (this is the default behavior); "never" - the icon will not be present </string>
-      <string id="icon-visibility_help"> </string>
+      <string id="icon-visibility_help"> !!!</string>
+	<string id="icon-visibility_client">!!!</string>
+	<string id="icon-visibility_always">!!!!</string>
+	<string id="icon-visibility_never">!!!!!</string>
 
       <string id="button-power"> </string>
       <string id="button-power_help"> </string>
+	<string id="button-power_nothing">ничего не делать</string>
+	<string id="button-power_suspend">спящий режим</string>
+	<string id="button-power_hibernate">гибернация</string>
+	<string id="button-power_shutdown">выключение</string>
+	<string id="button-power_interactive">спросить</string>
       
       <string id="mode">Режим выбора, используемый хранителем экрана. Возможные варианты: «disabled» — отключён, «blank-only» — чёрный экран,.
       «single» — использовать одну тему, указанную ключом «темы», «random» — использовать случайно выбранную тему.</string>
@@ -112,21 +138,120 @@ False - отключить блокировку компьютера при во
       single - при активации хранителя экрана используется тема, указанная ключом "темы"
 
       random - при активации хранителя экрана используется случайно выбранная тема</string>
+	<string id="mode_blank_only">!!!</string>
+	<string id="mode_random">!!!!</string>
+	<string id="mode_single">!!!!!</string>
+
+	<string id="themes">!!!</string>
+	<string id="themes_help"></string>
 
       <string id="use-upnp">If true, request that a UPnP-capable router should forward and open the port used by Vino.</string>
       <string id="use-upnp_help"> !!!!</string>
 
+	<string id="button-layout"></string>
+	<string id="button-layout_help"></string>
+
       <string id="num-workespaces"> Количество рабочих областей.</string>
       <string id="num-workspaces_help">Number of workspaces. Must be more than zero, and has a fixed maximum(36) to prevent making the desktop unusable by.
       accidentally asking for too many workspaces.</string>
+	
+	<string id="theme">!!!!</string>
+	<string id="theme_help">!!!!</string>
 
       <string id="visual-bell">Turns on a visual indication when an application or the system issues a 'bell' or 'beep'; useful for the hard-of-hearing.
       and for use in noisy environments.</string>
       <string id="visual-bell_help"> </string>
 
+	<string id="gtk-theme">!!!!</string>
+	<string id="gtk-theme_help">!!!!</string>
+
+	<string id="icon-theme">!!!!</string>
+	<string id="icon-theme_help">!!!!</string>
+
     </stringTable>
 
     <presentationTable>
+	<presentation id="cycle-delay-pr">
+		<text>Интервал в минутах между сменами тем хранителя экрана</text>
+		<decimalTextBox refId="ScreenSaverCycleDelay" defaultValue="2">Интервал смены тем хранителя в минутах</decimalTextBox>
+	</presentation>
+	
+	<presentation id="embedded-keyboard-command-pr">
+		<text>Команда для встраивания виджета клавиатруы в окно</text>
+		<textBox refId="EmbeddedKeyboardCommand">
+			<label>Command: </label>
+		</textBox>
+	</presentation>
+
+	<presentation id="lock-delay-pr">
+		<text>Интервал в минутах между активацией хранителя экрана и появлением диалоге выхода из системы при активации</text>
+		<decimalTextBox refId="ScreenSaverTimeLock" defaultValue="2">Время в минутах</decimalTextBox>
+	</presentation>
+
+	<presentation id="logout-delay-pr">
+		<text>Количество минут, по истечении которого после активации хранителя экрана, экран будет заблоктрован</text>
+		<decimalTextBox refId="ScreenSaverLogoutDelay" defaultValue="3">Время в минутах</decimalTextBox>
+	</presentation>
+	
+	<presentation id="power-management-delay-pr">
+		<text>Время в секундах, по прошествии которого система управления питанием получает сигнал о бездействии пользователя</text>
+		<decimalTextBox refId="ScreenSaverUserIdle" defaultValue="180">Время в минутах</decimalTextBox>
+	</presentation>
+	
+	<presentation id="sleep-computer-ac-pr">
+		<text>Какое время в секундах компьютер должен простаивать при питании от сети перед приостановкой</text>
+		<decimalTextBox refId="AcSleepTimeoutSec" defaultValue="300">Время в cекундах</decimalTextBox>
+	</presentation>
+
+	<presentation id="sleep-display-ac-pr">
+		<text>Какое время в секундах компьютер должен простаивать при питании от сети перед передотключением дисплея</text>
+		<decimalTextBox refId="AcSuspendTimeoutSec" defaultValue="240">Время в cекундах</decimalTextBox>
+	</presentation>
+
+	<presentation id="idle-delay-pr">
+		<text>!!!</text>
+		<decimalTextBox refId="ScreenSaverTimeOutFreqSpin">!!!</decimalTextBox>
+	</presentation>	
+
+	<presentation id="themes-pr">
+		<textBox refId="themes">
+			<label> !!!</label>
+		</textBox>
+	</presentation>
+	
+	<presentation id="button-layout">
+		<textBox refId="button-layout">
+			<label> !!!</label>
+		</textBox>
+	</presentation>
+	
+	<presentation id="num-workspaces">
+		<text>!!!</text>
+		<decimalTextBox refId="NumWorkspaces">!!!</decimalTextBox>
+	</presentation>
+	
+	<presentation id="theme">
+		<text>!!!</text>
+		<textBox refId="theme">
+			<label>!!! </label>
+		</textBox>
+	</presentation>
+
+	<presentation id="gtk-theme">
+		<text>!!!</text>
+		<textBox refId="gtk-theme">
+			<label>!!! </label>
+		</textBox>
+	</presentation>
+
+	<presentation id="icon-theme">
+		<text>!!!</text>
+		<textBox refId="icon-theme">
+			<label>!!! </label>
+		</textBox>
+	</presentation>
+		
+
       <presentation id="button-power">
         <dropdownList noSort="true" defaultItem="0" refId="button-power_setter">Select an operating mode:
         </dropdownList>
@@ -139,12 +264,15 @@ False - отключить блокировку компьютера при во
         <dropdownList noSort="true" defaultItem="0" refId="icon-policy_setter">Select an operating mode:
         </dropdownList>
       </presentation>
-      <presentation id="Wallpaper">
-        <dropdownList noSort="true" defaultItem="0" refId="Wallpaper_setter">Select an operating mode:
+      <presentation id="Wallpaper-pr">
+	<textBox refId="WallpaperName">
+		<label>Name!!!!</label>
+	</textBox>
+        <dropdownList noSort="true" defaultItem="0" refId="WallpaperStyle">Select an operating mode:
         </dropdownList>
       </presentation>
       <presentation id="icon-visibility">
-        <dropdownList noSort="true" defaultItem="0" refId="icon-visibility_setter">Select an operating mode:
+        <dropdownList noSort="true" defaultItem="0" refId="icon-visibility">Select an operating mode:
         </dropdownList>
       </presentation>
       <presentation id="orientation">
