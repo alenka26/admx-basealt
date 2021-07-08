@@ -19,26 +19,26 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	    <decimal id="ScreenSaverCycleDelay_setter" valueName="ScreenSaverDelayCycle" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="ScreenSaverCycleDelay_setter" valueName="org.mate.screensaver.cycle-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
     
     <policy name="OrgMateScreensaverEmbeddedKeyboardCommandUser" class="User"
         displayName="$(string.embedded-keyboard-command)"
         explainText="$(string.embedded-keyboard-command_help)"
-        key="Software\Policies\BaseALT\gsettings\"
-        valueName="org.mate.screensaver\embedded-keyboard-command" presentation="$(presentation.OrgMateScreensaverEmbeddedKeyboardCommand-pr)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.screensaver.embedded-keyboard-command" presentation="$(presentation.OrgMateScreensaverEmbeddedKeyboardCommand-pr)">
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-        <text id="EmbeddedKeyboardCommand_setter" valueName="EmbeddedCommandKeyboard" />
+        <text id="EmbeddedKeyboardCommand_setter" valueName="org.mate.screensaver.embedded-keyboard-command" />
     </elements>
     </policy>
     
     <policy name="OrgMateScreesaverIdleActivationEnabledUser" class="User"
             displayName="$(string.idle-activation-enabled)"
             explainText="$(string.idle-activation-enabled_help)"
-            key="Software\Policies\BaseALT\gsettings\"
+            key="Software\BaseALT\Policies\gsettings\"
             valueName="org.mate.screensaver.idle-activation-enabled">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
@@ -54,18 +54,18 @@
         displayName="$(string.lock-delay)"
         explainText="$(string.lock-delay_help)"
         key="Software\BaseALT\Policies\gsettings\"
-        valueName="org.mate.screensaver.lock-delay" presentation="$(presentation.OrgMateScreensaverLockDelayUser-pr)">
+        valueName="org.mate.screensaver.lock-delay" presentation="$(presentation.OrgMateScreensaverLockDelay-pr)">
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	    <decimal id="ScreenSaverTimeLock_setter" valueName="ScreenSaveLockTime" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="OrgMateScreensaverLockDelay_setter" valueName="org.mate.screensaver.lock-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
 
     <policy name="OrgMateScreensaverLockEnabledUser" class="User"
             displayName="$(string.lock-enabled)"
             explainText="$(string.lock-enabled_help)"
-            key="Software\Policies\Microsoft\Windows\Control Panel\Desktop"
+            key="Software\BaseALT\Policies\gsettings\"
             valueName="org.mate.screensaver.lock-enabled">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
@@ -85,7 +85,7 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	    <decimal id="logout-delay" valueName="logout-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="OrgMateScreensaverLogoutDelay_setter" valueName="org.mate.screensaver.logout-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
     
@@ -97,22 +97,66 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	    <decimal id="power-management-delay" valueName="power-management-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="OrgMateScreensaverPowerManagementDelay_setter" valueName="org.mate.screensaver.power-management-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>	
     </policy>
 
-<!--		!!!!!!!!!!!!!!!!!org.mate.power-manager		-->
-
-    <policy name="button-power-user" class="User"
-        displayName="$(string.button-power)"
-        explainText="$(string.button-power_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.power-manager"
-        valueName="button-power"
-        presentation="$(presentation.button-power)">
+     <policy name="OrgMateScreensaverModeUser" class="User"
+        displayName="$(string.mode)"
+        explainText="$(string.mode_help)"
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.screensaver.mode"
+        presentation="$(presentation.OrgMateScreensaverMode-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="button-power_setter" required="true" valueName="button-power">
+        <enum id="OrgMateScreensaverMode_setter" required="true" valueName="org.mate.screensaver.mode">
+          <item displayName="$(string.mode_blank_only)">
+            <value>
+              <string>blank_only</string>
+            </value>
+          </item>
+          <item displayName="$(string.mode_random)">
+            <value>
+              <string>random</string>
+            </value>
+          </item>
+          <item displayName="$(string.mode_single)">
+            <value>
+              <string>single</string>
+            </value>
+          </item>
+        </enum>
+	</elements>
+    </policy> 
+
+    <policy name="OrgMateScreensaverThemesUser" class="User"
+        displayName="$(string.themes)"
+        explainText="$(string.themes_help)"
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.screensaver.themes"
+	presentation="$(presentation.OrgMateScreensaverThemes-pr)">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+        <text id="OrgMateScreensaverThemes_setter" valueName="org.mate.screensaver.themes" />
+    </elements>
+    </policy>
+
+
+
+<!--		org.mate.power-manager		-->
+
+    <policy name="OrgMatePowerManagerButtonPowerUser" class="User"
+        displayName="$(string.button-power)"
+        explainText="$(string.button-power_help)"
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.power-manager.button-power"
+        presentation="$(presentation.OrgMatePowerManagerButtonPower-pr)">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="OrgMatePowerManagerButtonPower_setter" required="true" valueName="org.mate.power-manager.button-power">
           <item displayName="$(string.button-power_nothing)">
             <value>
               <string>nothing</string>
@@ -142,16 +186,16 @@
       </elements>
     </policy>
 
-    <policy name="button-suspend-user" class="User"
+    <policy name="OrgMatePowerManagerButtonSuspendUser" class="User"
         displayName="$(string.button-suspend)"
         explainText="$(string.button-suspend_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.power-manager"
-        valueName="button-suspend"
-        presentation="$(presentation.button-suspend)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.power-manager.button-suspend"
+        presentation="$(presentation.OrgMatePowerManagerButtonSuspend-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="button-suspend_setter" required="true" valueName="button-suspend">
+        <enum id="OrgMatePowerManagerButtonSuspend_setter" required="true" valueName="org.mate.power-manager.button-suspend">
           <item displayName="$(string.button-suspend_blank)">
             <value>
               <string>blank</string>
@@ -186,16 +230,16 @@
       </elements>
     </policy>
 
-    <policy name="icon-policy-user" class="User"
+    <policy name="OrgMatePowerManagerIconPolicyUser" class="User"
         displayName="$(string.icon-policy)"
         explainText="$(string.icon-policy_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.power-manager"
-        valueName="icon-policy"
-        presentation="$(presentation.icon-policy)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.power-manager.icon-policy"
+        presentation="$(presentation.OrgMatePowerManagerIconPolicy-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="icon-policy_setter" required="true" valueName="icon-policy">
+        <enum id="OrgMatePowerManagerIconPolicy_setter" required="true" valueName="org.mate.power-manager.icon-policy">
           <item displayName="$(string.icon-policy_never)">
             <value>
               <string>never</string>
@@ -225,11 +269,11 @@
 	</elements>
     </policy>
  
-    <policy name="lock-hibernate-user" class="User"
+    <policy name="OrgMatePowerManagerLockHibernateUser" class="User"
         displayName="$(string.lock-hibernate)"
         explainText="$(string.lock-hibernate_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.power-manager"
-        valueName="lock-hibernate">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.power-manager.lock-hibernate">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -240,94 +284,37 @@
       </disabledValue>
     </policy>
     
-    <policy name="sleep-computer-ac-user" class="User"
+    <policy name="OrgMatePowerManagerSleepComputerAcUser" class="User"
         displayName="$(string.sleep-computer-ac)"
         explainText="$(string.sleep-computer-ac_help)"
-        presentation="$(presentation.sleep-computer-ac-pr)"
-        key="System\CurrentControlSet\Control\Power\Timeouts"
-        >
+        presentation="$(presentation.OrgMatePowerManagerSleepComputerAc-pr)"
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.power-manager.sleep-computer-ac">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <decimal id="AcSleepTimeoutSec" valueName="AcSleepTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
+        <decimal id="OrgMatePowerManagerSleepComputerAc_setter" valueName="org.mate.power-manager.sleep-computer-ac" minValue="0" maxValue="2147483647" storeAsText="true" />
       </elements>
     </policy>
 
-    <policy name="sleep-display-ac-user" class="User"
+    <policy name="OrgMatePowerManagerSleepDisplayAcUser" class="User"
         displayName="$(string.sleep-display-ac)"
         explainText="$(string.sleep-display-ac_help)"
-        presentation="$(presentation.sleep-display-ac-pr)"
-        key="System\CurrentControlSet\Control\Power\Timeouts"
-        >
+        presentation="$(presentation.OrgMatePowerManagerSleepDisplayAc-pr)"
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.power-manager.sleep-display-ac">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <decimal id="AcSuspendTimeoutSec" valueName="AcSuspendTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
+        <decimal id="OrgMatePowerManagerSleepDisplayAc_setter" valueName="org.mate.power-manager.sleep-display-ac" minValue="0" maxValue="2147483647" storeAsText="true" />
       </elements>
     </policy>
 
-<!--          org.mate.session         -->
-
-    <policy name="idle-delay-user" class="User"
-        displayName="$(string.idle-delay)"
-        explainText="$(string.idle-delay_help)"
-        presentation="$(presentation.idle-delay-pr)"
-        key="Software\Policies\Microsoft\Windows\Control Panel\Desktop">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <elements>
-        <decimal id="ScreenSaverTimeOutFreqSpin" valueName="ScreenSaveTimeOut" maxValue="599940" storeAsText="true" />
-      </elements>
-    </policy>
-
-<!--          org.mate.background         -->
-
-	<policy name="Wallpaper-user" class="User"
-        displayName="$(string.Wallpaper)" 
-        explainText="$(string.Wallpaper_help)"  
-        key="Software\Microsoft\Windows\CurrentVersion\Policies\System"
-        presentation="$(presentation.Wallpaper-pr)">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <elements>
-        <text id="WallpaperName" valueName="WallpaperName" required="true" />
-        <enum id="WallpaperStyle" valueName="WallpaperStyle" required="true">
-          <item displayName="$(string.WallpaperStyle_Center)">
-            <value>
-              <string>0</string>
-            </value>
-          </item>
-          <item displayName="$(string.WallpaperStyle_Tile)">
-            <value>
-              <string>1</string>
-            </value>
-          </item>
-          <item displayName="$(string.WallpaperStyle_Stretch)">
-            <value>
-              <string>2</string>
-            </value>
-          </item>
-          <item displayName="$(string.WallpaperStyle_KeepAspect)">
-            <value>
-              <string>3</string>
-            </value>
-          </item>
-          <item displayName="$(string.WallpaperStyle_CropToFit)">
-            <value>
-              <string>4</string>
-            </value>
-          </item>
-        </enum>
-      </elements>
-    </policy>
-
-<!--          org.gnome.Vino         -->
-
-    <policy name="enabled-user" class="User"
-        displayName="$(string.enabled)"
-        explainText="$(string.enabled_help)"
-        key="Software\BaseALT\Policies\gsettings\org.gnome.Vino"
-        valueName="enabled">
+      <policy name="OrgMatePowerManagerUseUpnpUser" class="User"
+            displayName="$(string.use-upnp)"
+            explainText="$(string.use-upnp_help)"
+            key="Software\BaseALT\Policies\gsettings\"
+	    valueName="org.mate.power-manager.use-upnp">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -338,15 +325,100 @@
       </disabledValue>
     </policy>
 
-    <policy name="icon-visibility-user" class="User"
-        displayName="$(string.icon-visibility)" 
-        explainText="$(string.icon-visibility_help)" 
-        presentation="$(presentation.icon-visibility)" 
-        key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
+
+<!--          org.mate.session         -->
+
+    <policy name="OrgMateSessionIdleDelayUser" class="User"
+        displayName="$(string.idle-delay)"
+        explainText="$(string.idle-delay_help)"
+        presentation="$(presentation.OrgMateSessionIdleDelay-pr)"
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.session.idle-delay">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="icon-visibility" valueName="icon-visibility" required="true">
+        <decimal id="OrgMateSessionIdleDelay_setter" valueName="org.mate.session.idle-delay" maxValue="599940" storeAsText="true" />
+      </elements>
+    </policy>
+
+<!--          org.mate.background         -->
+
+	<policy name="OrgMateBackgroundPictureOptionsUser" class="User"
+        displayName="$(string.Wallpaper)" 
+        explainText="$(string.Wallpaper_help)"  
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.background.picture-options"
+        presentation="$(presentation.OrgMateBackgroundPictureOptions-pr)">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="OrgMateBackgroundPictureOptions_setter" valueName="org.mate.background.picture-options" required="true">
+          <item displayName="$(string.WallpaperStyle_None)">
+            <value>
+              <string>none</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Wallpaper)">
+            <value>
+              <string>wallpaper</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Centered)">
+            <value>
+              <string>centered</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Scaled)">
+            <value>
+              <string>scaled</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Stretched)">
+            <value>
+              <string>stretched</string>
+            </value>
+          </item>
+	  <item displayName="$(string.WallpaperStyle_Zoom)">
+            <value>
+              <string>zoom</string>
+            </value>
+	   </item>	
+	  <item displayName="$(string.WallpaperStyle_Spanned)">
+            <value>
+              <string>spanned</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+
+<!--          org.gnome.Vino         -->
+
+    <policy name="OrgGnomeVinoEnabledUser" class="User"
+        displayName="$(string.enabled)"
+        explainText="$(string.enabled_help)"
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.gnome.Vino.enabled">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+
+    <policy name="OrgGnomeVinoIconVisibilityUser" class="User"
+        displayName="$(string.icon-visibility)" 
+        explainText="$(string.icon-visibility_help)" 
+        presentation="$(presentation.OrgGnomeVinoIconVisibility-pr)" 
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.gnome.Vino.icon-visibility">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="OrgGnomeVinoIconVisibility" valueName="org.gnome.Vino.icon-visibility" required="true">
           <item displayName="$(string.icon-visibility_client)">
             <value>
               <string>client</string>
@@ -366,11 +438,12 @@
       </elements>
     </policy>
 
-    <policy name="promt-enabled-user" class="User"
+
+    <policy name="OrgGnomeVinoPromtEnabledUser" class="User"
         displayName="$(string.promt-enabled)"
         explainText="$(string.promt-enabled_help)"
-        key="Software\BaseALT\Policies\gsettings\org.gnome.Vino"
-        valueName="promt-enabled">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.gnome.Vino.promt-enabled">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -381,96 +454,11 @@
       </disabledValue>
     </policy>
 
-    <policy name="view-only-user" class="User"
+    <policy name="OrgGnomeVinoViewOnlyUser" class="User"
         displayName="$(string.view-only)"
         explainText="$(string.view-only_help)"
-        key="Software\BaseALT\Policies\gsettings\org.gnome.Vino"
-        valueName="view-only">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <enabledValue>
-        <string>1</string>
-      </enabledValue>
-      <disabledValue>
-        <string>0</string>
-      </disabledValue>
-    </policy>
-
-<!--          org.mate.panel.toplevel         -->
-
-    <policy name="orientation-user" class="User"
-        displayName="$(string.orientation)"
-        explainText="$(string.orientation_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.panel.toplevel"
-        presentation="$(presentation.orientation)">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <elements>
-        <enum id="orientation_setter" required="true" valueName="orientation">
-          <item displayName="$(string.orientation_top)">
-            <value>
-              <string>top</string>
-            </value>
-          </item>
-          <item displayName="$(string.orientation_bottom)">
-            <value>
-              <string>bottom</string>
-            </value>
-          </item>
-        </enum>
-	</elements>
-    </policy>
-
-<!--          user.screensaver         -->
-
-    <policy name="mode-user" class="User"
-        displayName="$(string.mode)"
-        explainText="$(string.mode_help)"
-        key="Software\BaseALT\Policies\gsettings\user.screensaver"
-        presentation="$(presentation.mode)">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <elements>
-        <enum id="mode_setter" required="true" valueName="mode">
-          <item displayName="$(string.mode_blank_only)">
-            <value>
-              <string>blank_only</string>
-            </value>
-          </item>
-          <item displayName="$(string.mode_random)">
-            <value>
-              <string>random</string>
-            </value>
-          </item>
-          <item displayName="$(string.mode_single)">
-            <value>
-              <string>single</string>
-            </value>
-          </item>
-        </enum>
-	</elements>
-    </policy>
-
-    <policy name="themes-user" class="User"
-        displayName="$(string.themes)"
-        explainText="$(string.themes_help)"
-        key="Software\BaseALT\Policies\gsettings\user.screensaver"
-        valueName="themes"
-	presentation="$(presentation.themes-pr)">
-    <parentCategory ref="system:ALT_Graphics" />
-    <supportedOn ref="system:SUPPORTED_AltP9" />
-    <elements>
-        <text id="themes" valueName="themes" />
-    </elements>
-    </policy>
-
-<!--          girt         -->
-
-    <policy name="use-upnp-user" class="User"
-            displayName="$(string.use-upnp)"
-            explainText="$(string.use-upnp_help)"
-            key="Software\BaseALT\Policies\gsettings\girt"
-	    valueName="use-upnp">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.gnome.Vino.view-only">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -483,16 +471,16 @@
 
 <!--          org.mate.Marco.general         -->
 
-    <policy name="button-layout-user" class="User"
+    <policy name="OrgMateMarcoGeneralButtonLayoutUser" class="User"
         displayName="$(string.button-layout)"
         explainText="$(string.button-layout_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.Marco.general"
-        valueName="button-layout"
-	presentation="$(presentation.button-layout)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.Marco.general.button-layout"
+	presentation="$(presentation.OrgMateMarcoGeneralButtonLayout-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <text id="button-layout" valueName="button-layout" />
+        <text id="OrgMateMarcoGeneralButtonLayout_setter" valueName="org.mate.Marco.general.button-layout" />
       </elements>
       </policy>
 
@@ -509,24 +497,24 @@
       </elements>
     </policy>
 
-    <policy name="theme-user" class="User"
+    <policy name="OrgMateMarcoGeneralThemeUser" class="User"
         displayName="$(string.theme)"
         explainText="$(string.theme_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.Marco.general"
-        valueName="theme"
-	presentation="$(presentation.theme)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.Marco.general.theme"
+	presentation="$(presentation.OrgMateMarcoGeneralTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <text id="theme" valueName="theme" />
+        <text id="OrgMateMarcoGeneralTheme_setter" valueName="org.mate.Marco.general.theme" />
       </elements>
       </policy>
 
-    <policy name="visual-bell-user" class="User"
+    <policy name="OrgMateMarcoGeneralVisualBellUser" class="User"
         displayName="$(string.visual-bell)"
         explainText="$(string.visual-bell_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.Marco.general"
-        valueName="visual-bell">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.Marco.general.visual-bell">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -539,29 +527,29 @@
 
 <!--          org.mate.interface         -->
 
-    <policy name="gtk-theme-user" class="User"
+    <policy name="OrgMateInterfaceGtkThemeUser" class="User"
         displayName="$(string.gtk-theme)"
         explainText="$(string.gtk-theme_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.interface"
-        valueName="gtk-theme"
-	presentation="$(presentation.gtk-theme)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.interface.gtk-theme"
+	presentation="$(presentation.OrgMateInterfaceGtkTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <text id="gtk-theme" valueName="gtk-theme" />
+        <text id="OrgMateInterfaceGtkTheme" valueName="org.mate.interface.gtk-theme" />
       </elements>
       </policy>
 
-    <policy name="icon-theme-user" class="User"
+    <policy name="OrgMateInterfaceIconThemeUser" class="User"
         displayName="$(string.icon-theme)"
         explainText="$(string.icon-theme_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.interface"
-        valueName="icon-theme"
-	presentation="$(presentation.icon-theme)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.interface.icon-theme"
+	presentation="$(presentation.OrgMateInterfaceIconTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <text id="icon-theme" valueName="icon-theme" />
+        <text id="OrgMateInterfaceIconTheme" valueName="org.mate.interface.icon-theme" />
       </elements>
       </policy>
 
@@ -576,26 +564,26 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	    <decimal id="ScreenSaverCycleDelay_setter" valueName="ScreenSaverDelayCycle" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="ScreenSaverCycleDelay_setter" valueName="org.mate.screensaver.cycle-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
     
     <policy name="OrgMateScreensaverEmbeddedKeyboardCommandMachine" class="Machine"
         displayName="$(string.embedded-keyboard-command)"
         explainText="$(string.embedded-keyboard-command_help)"
-        key="Software\Policies\BaseALT\gsettings\"
-        valueName="org.mate.screensaver\embedded-keyboard-command" presentation="$(presentation.OrgMateScreensaverEmbeddedKeyboardCommand-pr)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.screensaver.embedded-keyboard-command" presentation="$(presentation.OrgMateScreensaverEmbeddedKeyboardCommand-pr)">
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-        <text id="EmbeddedKeyboardCommand_setter" valueName="EmbeddedCommandKeyboard" />
+        <text id="EmbeddedKeyboardCommand_setter" valueName="org.mate.screensaver.embedded-keyboard-command" />
     </elements>
     </policy>
     
     <policy name="OrgMateScreesaverIdleActivationEnabledMachine" class="Machine"
             displayName="$(string.idle-activation-enabled)"
             explainText="$(string.idle-activation-enabled_help)"
-            key="Software\Policies\BaseALT\gsettings\"
+            key="Software\BaseALT\Policies\gsettings\"
             valueName="org.mate.screensaver.idle-activation-enabled">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
@@ -611,18 +599,18 @@
         displayName="$(string.lock-delay)"
         explainText="$(string.lock-delay_help)"
         key="Software\BaseALT\Policies\gsettings\"
-        valueName="org.mate.screensaver.lock-delay" presentation="$(presentation.OrgMateScreensaverLockDelayUser-pr)">
+        valueName="org.mate.screensaver.lock-delay" presentation="$(presentation.OrgMateScreensaverLockDelay-pr)">
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	    <decimal id="ScreenSaverTimeLock_setter" valueName="ScreenSaveLockTime" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="OrgMateScreensaverLockDelay_setter" valueName="org.mate.screensaver.lock-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
 
     <policy name="OrgMateScreensaverLockEnabledMachine" class="Machine"
             displayName="$(string.lock-enabled)"
             explainText="$(string.lock-enabled_help)"
-            key="Software\Policies\Microsoft\Windows\Control Panel\Desktop"
+            key="Software\BaseALT\Policies\gsettings\"
             valueName="org.mate.screensaver.lock-enabled">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
@@ -642,7 +630,7 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	    <decimal id="logout-delay" valueName="logout-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="OrgMateScreensaverLogoutDelay_setter" valueName="org.mate.screensaver.logout-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>
     </policy>
     
@@ -654,22 +642,64 @@
     <parentCategory ref="system:ALT_Graphics" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
-	    <decimal id="power-management-delay" valueName="power-management-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
+	    <decimal id="OrgMateScreensaverPowerManagementDelay_setter" valueName="org.mate.screensaver.power-management-delay" minValue="0" maxValue="2147483647" storeAsText="true" />
     </elements>	
+    </policy>
+
+     <policy name="OrgMateScreensaverModeMachine" class="Machine"
+        displayName="$(string.mode)"
+        explainText="$(string.mode_help)"
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.screensaver.mode"
+        presentation="$(presentation.OrgMateScreensaverMode-pr)">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="OrgMateScreensaverMode_setter" required="true" valueName="org.mate.screensaver.mode">
+          <item displayName="$(string.mode_blank_only)">
+            <value>
+              <string>blank_only</string>
+            </value>
+          </item>
+          <item displayName="$(string.mode_random)">
+            <value>
+              <string>random</string>
+            </value>
+          </item>
+          <item displayName="$(string.mode_single)">
+            <value>
+              <string>single</string>
+            </value>
+          </item>
+        </enum>
+	</elements>
+    </policy> 
+
+    <policy name="OrgMateScreensaverThemesMachine" class="Machine"
+        displayName="$(string.themes)"
+        explainText="$(string.themes_help)"
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.screensaver.themes"
+	presentation="$(presentation.OrgMateScreensaverThemes-pr)">
+    <parentCategory ref="system:ALT_Graphics" />
+    <supportedOn ref="system:SUPPORTED_AltP9" />
+    <elements>
+        <text id="OrgMateScreensaverThemes_setter" valueName="org.mate.screensaver.themes" />
+    </elements>
     </policy>
 
 <!--		org.mate.power-manager		-->
 
-    <policy name="button-power-machine" class="Machine"
-         displayName="$(string.button-power)"
+    <policy name="OrgMatePowerManagerButtonPowerMachine" class="Machine"
+        displayName="$(string.button-power)"
         explainText="$(string.button-power_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.power-manager"
-        valueName="button-power"
-        presentation="$(presentation.button-power)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.power-manager.button-power"
+        presentation="$(presentation.OrgMatePowerManagerButtonPower-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="button-power_setter" required="true" valueName="button-power">
+        <enum id="OrgMatePowerManagerButtonPower_setter" required="true" valueName="org.mate.power-manager.button-power">
           <item displayName="$(string.button-power_nothing)">
             <value>
               <string>nothing</string>
@@ -700,16 +730,16 @@
     </policy>
 
 
-    <policy name="button-suspend-machine" class="Machine"
+    <policy name="OrgMatePowerManagerButtonSuspendMachine" class="Machine"
         displayName="$(string.button-suspend)"
         explainText="$(string.button-suspend_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.power-manager"
-        valueName="button-suspend"
-        presentation="$(presentation.button-suspend)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.power-manager.button-suspend"
+        presentation="$(presentation.OrgMatePowerManagerButtonSuspend-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="button-suspend_setter" required="true" valueName="button-suspend">
+        <enum id="OrgMatePowerManagerButtonSuspend_setter" required="true" valueName="org.mate.power-manager.button-suspend">
           <item displayName="$(string.button-suspend_blank)">
             <value>
               <string>blank</string>
@@ -744,16 +774,16 @@
       </elements>
     </policy>
 
-    <policy name="icon-policy-machine" class="Machine"
+    <policy name="OrgMatePowerManagerIconPolicyMachine" class="Machine"
         displayName="$(string.icon-policy)"
         explainText="$(string.icon-policy_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.power-manager"
-        valueName="icon-policy"
-        presentation="$(presentation.icon-policy)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.power-manager.icon-policy"
+        presentation="$(presentation.OrgMatePowerManagerIconPolicy-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="icon-policy_setter" required="true" valueName="icon-policy">
+        <enum id="OrgMatePowerManagerIconPolicy_setter" required="true" valueName="org.mate.power-manager.icon-policy">
           <item displayName="$(string.icon-policy_never)">
             <value>
               <string>never</string>
@@ -783,11 +813,11 @@
 	</elements>
     </policy>
  
-    <policy name="lock-hibernate-machine" class="Machine"
+    <policy name="OrgMatePowerManagerLockHibernateMachine" class="Machine"
         displayName="$(string.lock-hibernate)"
         explainText="$(string.lock-hibernate_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.power-manager"
-        valueName="lock-hibernate">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.power-manager.lock-hibernate">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -798,94 +828,37 @@
       </disabledValue>
     </policy>
     
-    <policy name="sleep-computer-ac-machine" class="Machine"
+    <policy name="OrgMatePowerManagerSleepComputerAcMachine" class="Machine"
         displayName="$(string.sleep-computer-ac)"
         explainText="$(string.sleep-computer-ac_help)"
-        presentation="$(presentation.sleep-computer-ac-pr)"
-        key="System\CurrentControlSet\Control\Power\Timeouts"
-        >
+        presentation="$(presentation.OrgMatePowerManagerSleepComputerAc-pr)"
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.power-manager.sleep-computer-ac">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <decimal id="AcSleepTimeoutSec" valueName="AcSleepTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
+        <decimal id="OrgMatePowerManagerSleepComputerAc_setter" valueName="org.mate.power-manager.sleep-computer-ac" minValue="0" maxValue="2147483647" storeAsText="true" />
       </elements>
     </policy>
 
-    <policy name="sleep-display-ac-machine" class="Machine"
+    <policy name="OrgMatePowerManagerSleepDisplayAcMachine" class="Machine"
         displayName="$(string.sleep-display-ac)"
         explainText="$(string.sleep-display-ac_help)"
-        presentation="$(presentation.sleep-display-ac-pr)"
-        key="System\CurrentControlSet\Control\Power\Timeouts"
-        >
+        presentation="$(presentation.OrgMatePowerManagerSleepDisplayAc-pr)"
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.power-manager.sleep-display-ac">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <decimal id="AcSuspendTimeoutSec" valueName="AcSuspendTimeout" minValue="0" maxValue="2147483647" storeAsText="true" />
+        <decimal id="OrgMatePowerManagerSleepDisplayAc_setter" valueName="org.mate.power-manager.sleep-display-ac" minValue="0" maxValue="2147483647" storeAsText="true" />
       </elements>
     </policy>
 
-<!--          org.mate.session         -->
-
-    <policy name="idle-delay-machine" class="Machine"
-        displayName="$(string.idle-delay)"
-        explainText="$(string.idle-delay_help)"
-        presentation="$(presentation.idle-delay-pr)"
-        key="Software\Policies\Microsoft\Windows\Control Panel\Desktop">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <elements>
-        <decimal id="ScreenSaverTimeOutFreqSpin" valueName="ScreenSaveTimeOut" maxValue="599940" storeAsText="true" />
-      </elements>
-    </policy>
-
-<!--          org.mate.background         -->
-
-	<policy name="Wallpaper-machine" class="Machine"
-        displayName="$(string.Wallpaper)" 
-        explainText="$(string.Wallpaper_help)"  
-        key="Software\Microsoft\Windows\CurrentVersion\Policies\System"
-        presentation="$(presentation.Wallpaper-pr)">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <elements>
-        <text id="WallpaperName" valueName="WallpaperName" required="true" />
-        <enum id="WallpaperStyle" valueName="WallpaperStyle" required="true">
-          <item displayName="$(string.WallpaperStyle_Center)">
-            <value>
-              <string>0</string>
-            </value>
-          </item>
-          <item displayName="$(string.WallpaperStyle_Tile)">
-            <value>
-              <string>1</string>
-            </value>
-          </item>
-          <item displayName="$(string.WallpaperStyle_Stretch)">
-            <value>
-              <string>2</string>
-            </value>
-          </item>
-          <item displayName="$(string.WallpaperStyle_KeepAspect)">
-            <value>
-              <string>3</string>
-            </value>
-          </item>
-          <item displayName="$(string.WallpaperStyle_CropToFit)">
-            <value>
-              <string>4</string>
-            </value>
-          </item>
-        </enum>
-      </elements>
-    </policy>
-
-<!--          org.gnome.Vino         -->
-
-    <policy name="enabled-machine" class="Machine"
-        displayName="$(string.enabled)"
-        explainText="$(string.enabled_help)"
-        key="Software\BaseALT\Policies\gsettings\org.gnome.Vino"
-        valueName="enabled">
+    <policy name="OrgMatePowerManagerUseUpnpMachine" class="Machine"
+            displayName="$(string.use-upnp)"
+            explainText="$(string.use-upnp_help)"
+            key="Software\BaseALT\Policies\gsettings\"
+	    valueName="org.mate.power-manager.use-upnp">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -896,15 +869,99 @@
       </disabledValue>
     </policy>
 
-    <policy name="icon-visibility-machine" class="Machine"
-        displayName="$(string.icon-visibility)" 
-        explainText="$(string.icon-visibility_help)" 
-        presentation="$(presentation.icon-visibility)" 
-        key="Software\Microsoft\Windows\CurrentVersion\Policies\System">
+<!--          org.mate.session         -->
+
+    <policy name="OrgMateSessionIdleDelayMachine" class="Machine"
+        displayName="$(string.idle-delay)"
+        explainText="$(string.idle-delay_help)"
+        presentation="$(presentation.OrgMateSessionIdleDelay-pr)"
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.session.idle-delay">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <enum id="icon-visibility" valueName="icon-visibility" required="true">
+        <decimal id="OrgMateSessionIdleDelay_setter" valueName="org.mate.session.idle-delay" maxValue="599940" storeAsText="true" />
+      </elements>
+    </policy>
+
+<!--          org.mate.background         -->
+
+	<policy name="OrgMateBackgroundPictureOptionsMachine" class="Machine"
+        displayName="$(string.Wallpaper)" 
+        explainText="$(string.Wallpaper_help)"  
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.mate.background.picture-options"
+        presentation="$(presentation.OrgMateBackgroundPictureOptions-pr)">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="OrgMateBackgroundPictureOptions_setter" valueName="org.mate.background.picture-options" required="true">
+          <item displayName="$(string.WallpaperStyle_None)">
+            <value>
+              <string>none</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Wallpaper)">
+            <value>
+              <string>wallpaper</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Centered)">
+            <value>
+              <string>centered</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Scaled)">
+            <value>
+              <string>scaled</string>
+            </value>
+          </item>
+          <item displayName="$(string.WallpaperStyle_Stretched)">
+            <value>
+              <string>stretched</string>
+            </value>
+          </item>
+	  <item displayName="$(string.WallpaperStyle_Zoom)">
+            <value>
+              <string>zoom</string>
+            </value>
+	   </item>	
+	  <item displayName="$(string.WallpaperStyle_Spanned)">
+            <value>
+              <string>spanned</string>
+            </value>
+          </item>
+        </enum>
+      </elements>
+    </policy>
+
+<!--          org.gnome.Vino         -->
+
+    <policy name="OrgGnomeVinoEnabledMachine" class="Machine"
+        displayName="$(string.enabled)"
+        explainText="$(string.enabled_help)"
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.gnome.Vino.enabled">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <enabledValue>
+        <string>1</string>
+      </enabledValue>
+      <disabledValue>
+        <string>0</string>
+      </disabledValue>
+    </policy>
+
+    <policy name="OrgGnomeVinoIconVisibilityMachine" class="Machine"
+        displayName="$(string.icon-visibility)" 
+        explainText="$(string.icon-visibility_help)" 
+        presentation="$(presentation.OrgGnomeVinoIconVisibility-pr)" 
+        key="Software\BaseALT\Policies\gsettings\"
+	valueName="org.gnome.Vino.icon-visibility">
+      <parentCategory ref="system:ALT_Graphics" />
+      <supportedOn ref="system:SUPPORTED_AltP9" />
+      <elements>
+        <enum id="OrgGnomeVinoIconVisibility" valueName="org.gnome.Vino.icon-visibility" required="true">
           <item displayName="$(string.icon-visibility_client)">
             <value>
               <string>client</string>
@@ -924,11 +981,11 @@
       </elements>
     </policy>
 
-    <policy name="promt-enabled-machine" class="Machine"
+    <policy name="OrgGnomeVinoPromtEnabledMachine" class="Machine"
         displayName="$(string.promt-enabled)"
         explainText="$(string.promt-enabled_help)"
-        key="Software\BaseALT\Policies\gsettings\org.gnome.Vino"
-        valueName="promt-enabled">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.gnome.Vino.promt-enabled">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -939,96 +996,11 @@
       </disabledValue>
     </policy>
 
-    <policy name="view-only-machine" class="Machine"
+    <policy name="OrgGnomeVinoViewOnlyMachine" class="Machine"
         displayName="$(string.view-only)"
         explainText="$(string.view-only_help)"
-        key="Software\BaseALT\Policies\gsettings\org.gnome.Vino"
-        valueName="view-only">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <enabledValue>
-        <string>1</string>
-      </enabledValue>
-      <disabledValue>
-        <string>0</string>
-      </disabledValue>
-    </policy>
-
-<!--          org.mate.panel.toplevel         -->
-
-    <policy name="orientation-machine" class="Machine"
-        displayName="$(string.orientation)"
-        explainText="$(string.orientation_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.panel.toplevel"
-        presentation="$(presentation.orientation)">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <elements>
-        <enum id="orientation_setter" required="true" valueName="orientation">
-          <item displayName="$(string.orientation_top)">
-            <value>
-              <string>top</string>
-            </value>
-          </item>
-          <item displayName="$(string.orientation_bottom)">
-            <value>
-              <string>bottom</string>
-            </value>
-          </item>
-        </enum>
-	</elements>
-    </policy>
-
-<!--          user.screensaver         -->
-
-    <policy name="mode-machine" class="Machine"
-        displayName="$(string.mode)"
-        explainText="$(string.mode_help)"
-        key="Software\BaseALT\Policies\gsettings\user.screensaver"
-        presentation="$(presentation.mode)">
-      <parentCategory ref="system:ALT_Graphics" />
-      <supportedOn ref="system:SUPPORTED_AltP9" />
-      <elements>
-        <enum id="mode_setter" required="true" valueName="mode">
-          <item displayName="$(string.mode_blank_only)">
-            <value>
-              <string>blank_only</string>
-            </value>
-          </item>
-          <item displayName="$(string.mode_random)">
-            <value>
-              <string>random</string>
-            </value>
-          </item>
-          <item displayName="$(string.mode_single)">
-            <value>
-              <string>single</string>
-            </value>
-          </item>
-        </enum>
-	</elements>
-    </policy>
-
-    <policy name="themes-machine" class="Machine"
-        displayName="$(string.themes)"
-        explainText="$(string.themes_help)"
-        key="Software\BaseALT\Policies\gsettings\user.screensaver"
-        valueName="themes"
-	presentation="$(presentation.themes-pr)">
-    <parentCategory ref="system:ALT_Graphics" />
-    <supportedOn ref="system:SUPPORTED_AltP9" />
-    <elements>
-        <text id="themes" valueName="themes" />
-    </elements>
-    </policy>
-
-<!--          girt         -->
-
-    <policy name="use-upnp-machine" class="Machine"
-            displayName="$(string.use-upnp)"
-            explainText="$(string.use-upnp_help)"
-            key="Software\BaseALT\Policies\gsettings\girt"
-	    valueName="use-upnp">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.gnome.Vino.view-only">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -1041,19 +1013,18 @@
 
 <!--          org.mate.Marco.general         -->
 
-    <policy name="button-layout-machine" class="Machine"
-       displayName="$(string.button-layout)"
+    <policy name="OrgMateMarcoGeneralButtonLayoutMachine" class="Machine"
+        displayName="$(string.button-layout)"
         explainText="$(string.button-layout_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.Marco.general"
-        valueName="button-layout"
-	presentation="$(presentation.button-layout)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.Marco.general.button-layout"
+	presentation="$(presentation.OrgMateMarcoGeneralButtonLayout-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <text id="button-layout" valueName="button-layout" />
+        <text id="OrgMateMarcoGeneralButtonLayout_setter" valueName="org.mate.Marco.general.button-layout" />
       </elements>
       </policy>
-
 
     <policy name="OrgMateMarcoGeneralNumWorkspacesMachine" class="Machine"
         displayName="$(string.num-workespaces)"
@@ -1068,25 +1039,24 @@
       </elements>
     </policy>
 
-
-    <policy name="theme-machine" class="Machine"
+    <policy name="OrgMateMarcoGeneralThemeMachine" class="Machine"
         displayName="$(string.theme)"
         explainText="$(string.theme_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.Marco.general"
-        valueName="theme"
-	presentation="$(presentation.theme)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.Marco.general.theme"
+	presentation="$(presentation.OrgMateMarcoGeneralTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <text id="theme" valueName="theme" />
+        <text id="OrgMateMarcoGeneralTheme_setter" valueName="org.mate.Marco.general.theme" />
       </elements>
       </policy>
 
-    <policy name="visual-bell-machine" class="Machine"
+    <policy name="OrgMateMarcoGeneralVisualBellMachine" class="Machine"
         displayName="$(string.visual-bell)"
         explainText="$(string.visual-bell_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.Marco.general"
-        valueName="visual-bell">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.Marco.general.visual-bell">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <enabledValue>
@@ -1099,29 +1069,29 @@
 
 <!--          org.mate.interface         -->
 
-    <policy name="gtk-theme-machine" class="Machine"
+    <policy name="OrgMateInterfaceGtkThemeMachine" class="Machine"
         displayName="$(string.gtk-theme)"
         explainText="$(string.gtk-theme_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.interface"
-        valueName="gtk-theme"
-	presentation="$(presentation.gtk-theme)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.interface.gtk-theme"
+	presentation="$(presentation.OrgMateInterfaceGtkTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <text id="gtk-theme" valueName="gtk-theme" />
+        <text id="OrgMateInterfaceGtkTheme" valueName="org.mate.interface.gtk-theme" />
       </elements>
       </policy>
 
-    <policy name="icon-theme-machine" class="Machine"
-       displayName="$(string.icon-theme)"
+    <policy name="OrgMateInterfaceIconThemeMachine" class="Machine"
+        displayName="$(string.icon-theme)"
         explainText="$(string.icon-theme_help)"
-        key="Software\BaseALT\Policies\gsettings\org.mate.interface"
-        valueName="icon-theme"
-	presentation="$(presentation.icon-theme)">
+        key="Software\BaseALT\Policies\gsettings\"
+        valueName="org.mate.interface.icon-theme"
+	presentation="$(presentation.OrgMateInterfaceIconTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
-        <text id="icon-theme" valueName="icon-theme" />
+        <text id="OrgMateInterfaceIconTheme" valueName="org.mate.interface.icon-theme" />
       </elements>
       </policy>
 
