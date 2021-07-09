@@ -10,7 +10,6 @@
 
 <!--         class="User"         -->
 <!--         org.mate.screensaver         -->
-    
 	
     <policy name="OrgMateScreensaverCycleDelayUser" class="User"
         displayName="$(string.cycle-delay)"
@@ -35,7 +34,6 @@
         <text id="EmbeddedKeyboardCommand_setter" valueName="org.mate.screensaver.embedded-keyboard-command" />
     </elements>
     </policy>
-
     <policy name="OrgMateScreesaverIdleActivationEnabledUser" class="User"
             displayName="$(string.idle-activation-enabled)"
             explainText="$(string.idle-activation-enabled_help)"
@@ -106,13 +104,13 @@
         displayName="$(string.mode)"
         explainText="$(string.mode_help)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.screensaver.mode"
+	      valueName="org.mate.screensaver.mode"
         presentation="$(presentation.OrgMateScreensaverMode-pr)">
       <parentCategory ref="system:ALT_Screensaver" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
         <enum id="OrgMateScreensaverMode_setter" required="true" valueName="org.mate.screensaver.mode">
-	  <item displayName="$(string.mode_disabled)">
+          <item displayName="$(string.mode_disabled)">
             <value>
               <string>disabled</string>
             </value>
@@ -141,15 +139,13 @@
         explainText="$(string.themes_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.screensaver.themes"
-	presentation="$(presentation.OrgMateScreensaverThemes-pr)">
+      	presentation="$(presentation.OrgMateScreensaverThemes-pr)">
     <parentCategory ref="system:ALT_Screensaver" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
         <text id="OrgMateScreensaverThemes_setter" valueName="org.mate.screensaver.themes" />
     </elements>
     </policy>
-
-
 
 <!--		org.mate.power-manager		-->
 
@@ -295,7 +291,7 @@
         explainText="$(string.sleep-computer-ac_help)"
         presentation="$(presentation.OrgMatePowerManagerSleepComputerAc-pr)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.power-manager.sleep-computer-ac">
+      	valueName="org.mate.power-manager.sleep-computer-ac">
       <parentCategory ref="system:ALT_PowerManagement" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -308,14 +304,13 @@
         explainText="$(string.sleep-display-ac_help)"
         presentation="$(presentation.OrgMatePowerManagerSleepDisplayAc-pr)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.power-manager.sleep-display-ac">
+      	valueName="org.mate.power-manager.sleep-display-ac">
       <parentCategory ref="system:ALT_PowerManagement" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
         <decimal id="OrgMatePowerManagerSleepDisplayAc_setter" valueName="org.mate.power-manager.sleep-display-ac" minValue="0" maxValue="2147483647" storeAsText="true" />
       </elements>
     </policy>
-
 
 <!--          org.mate.session         -->
 
@@ -324,7 +319,7 @@
         explainText="$(string.idle-delay_help)"
         presentation="$(presentation.OrgMateSessionIdleDelay-pr)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.session.idle-delay">
+      	valueName="org.mate.session.idle-delay">
       <parentCategory ref="system:ALT_PowerManagement" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -339,7 +334,7 @@
         explainText="$(string.picture-filename_help)"
         presentation="$(presentation.OrgMateBackgroundPictureFilename-pr)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.background.picture-filename">
+      	valueName="org.mate.background.picture-filename">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -351,7 +346,7 @@
         displayName="$(string.Wallpaper)" 
         explainText="$(string.Wallpaper_help)"  
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.background.picture-options"
+        valueName="org.mate.background.picture-options"
         presentation="$(presentation.OrgMateBackgroundPictureOptions-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
@@ -398,6 +393,7 @@
 
 <!--          org.gnome.Vino         -->
 
+
       <policy name="OrgGnomeVinoUseUpnpUser" class="User"
             displayName="$(string.use-upnp)"
             explainText="$(string.use-upnp_help)"
@@ -427,13 +423,13 @@
         <string>0</string>
       </disabledValue>
     </policy>
-	
+
     <policy name="OrgGnomeVinoIconVisibilityUser" class="User"
         displayName="$(string.icon-visibility)" 
         explainText="$(string.icon-visibility_help)" 
         presentation="$(presentation.OrgGnomeVinoIconVisibility-pr)" 
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.gnome.Vino.icon-visibility">
+      	valueName="org.gnome.Vino.icon-visibility">
       <parentCategory ref="system:ALT_Vino" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -456,6 +452,7 @@
         </enum>
       </elements>
     </policy>
+
 
     <policy name="OrgGnomeVinoPromptEnabledUser" class="User"
         displayName="$(string.prompt-enabled)"
@@ -494,7 +491,7 @@
         explainText="$(string.button-layout_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.Marco.general.button-layout"
-	presentation="$(presentation.OrgMateMarcoGeneralButtonLayout-pr)">
+    	presentation="$(presentation.OrgMateMarcoGeneralButtonLayout-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -506,8 +503,8 @@
         displayName="$(string.num-workespaces)"
         explainText="$(string.num-workspaces_help)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.Marco.general.num-workspaces"
-	presentation="$(presentation.num-workspaces)">
+      	valueName="org.mate.Marco.general.num-workspaces"
+	      presentation="$(presentation.num-workspaces)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -520,7 +517,7 @@
         explainText="$(string.theme_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.Marco.general.theme"
-	presentation="$(presentation.OrgMateMarcoGeneralTheme-pr)">
+     	presentation="$(presentation.OrgMateMarcoGeneralTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -550,7 +547,7 @@
         explainText="$(string.gtk-theme_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.interface.gtk-theme"
-	presentation="$(presentation.OrgMateInterfaceGtkTheme-pr)">
+     	presentation="$(presentation.OrgMateInterfaceGtkTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -563,7 +560,7 @@
         explainText="$(string.icon-theme_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.interface.icon-theme"
-	presentation="$(presentation.OrgMateInterfaceIconTheme-pr)">
+     	presentation="$(presentation.OrgMateInterfaceIconTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -653,9 +650,9 @@
     </policy>
     
     <policy name="OrgMateScreensaverPowerManagementDelayMachine" class="Machine"
-	    displayName="$(string.power-management-delay)"
-	    explainText="$(string.power-management-delay_help)"
-	    key="Software\BaseALT\Policies\gsettings"
+	      displayName="$(string.power-management-delay)"
+	      explainText="$(string.power-management-delay_help)"
+  	    key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.screensaver.power-management-delay" presentation="$(presentation.OrgMateScreensaverPowerManagementDelay-pr)">
     <parentCategory ref="system:ALT_Screensaver" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
@@ -668,7 +665,7 @@
         displayName="$(string.mode)"
         explainText="$(string.mode_help)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.screensaver.mode"
+      	valueName="org.mate.screensaver.mode"
         presentation="$(presentation.OrgMateScreensaverMode-pr)">
       <parentCategory ref="system:ALT_Screensaver" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
@@ -698,7 +695,7 @@
         explainText="$(string.themes_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.screensaver.themes"
-	presentation="$(presentation.OrgMateScreensaverThemes-pr)">
+      	presentation="$(presentation.OrgMateScreensaverThemes-pr)">
     <parentCategory ref="system:ALT_Screensaver" />
     <supportedOn ref="system:SUPPORTED_AltP9" />
     <elements>
@@ -851,7 +848,7 @@
         explainText="$(string.sleep-computer-ac_help)"
         presentation="$(presentation.OrgMatePowerManagerSleepComputerAc-pr)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.power-manager.sleep-computer-ac">
+      	valueName="org.mate.power-manager.sleep-computer-ac">
       <parentCategory ref="system:ALT_PowerManagement" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -864,15 +861,13 @@
         explainText="$(string.sleep-display-ac_help)"
         presentation="$(presentation.OrgMatePowerManagerSleepDisplayAc-pr)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.power-manager.sleep-display-ac">
+      	valueName="org.mate.power-manager.sleep-display-ac">
       <parentCategory ref="system:ALT_PowerManagement" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
         <decimal id="OrgMatePowerManagerSleepDisplayAc_setter" valueName="org.mate.power-manager.sleep-display-ac" minValue="0" maxValue="2147483647" storeAsText="true" />
       </elements>
     </policy>
-
-   
 
 <!--          org.mate.session         -->
 
@@ -881,7 +876,7 @@
         explainText="$(string.idle-delay_help)"
         presentation="$(presentation.OrgMateSessionIdleDelay-pr)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.session.idle-delay">
+      	valueName="org.mate.session.idle-delay">
       <parentCategory ref="system:ALT_PowerManagement" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -896,7 +891,7 @@
         explainText="$(string.picture-filename_help)"
         presentation="$(presentation.OrgMateBackgroundPictureFilename-pr)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.background.picture-filename">
+      	valueName="org.mate.background.picture-filename">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -908,7 +903,7 @@
         displayName="$(string.Wallpaper)" 
         explainText="$(string.Wallpaper_help)"  
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.background.picture-options"
+      	valueName="org.mate.background.picture-options"
         presentation="$(presentation.OrgMateBackgroundPictureOptions-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
@@ -971,6 +966,7 @@
     </policy>
 
 
+
     <policy name="OrgGnomeVinoEnabledMachine" class="Machine"
         displayName="$(string.enabled)"
         explainText="$(string.enabled_help)"
@@ -991,7 +987,7 @@
         explainText="$(string.icon-visibility_help)" 
         presentation="$(presentation.OrgGnomeVinoIconVisibility-pr)" 
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.gnome.Vino.icon-visibility">
+      	valueName="org.gnome.Vino.icon-visibility">
       <parentCategory ref="system:ALT_Vino" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -1052,7 +1048,7 @@
         explainText="$(string.button-layout_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.Marco.general.button-layout"
-	presentation="$(presentation.OrgMateMarcoGeneralButtonLayout-pr)">
+      	presentation="$(presentation.OrgMateMarcoGeneralButtonLayout-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -1064,8 +1060,8 @@
         displayName="$(string.num-workespaces)"
         explainText="$(string.num-workspaces_help)"
         key="Software\BaseALT\Policies\gsettings"
-	valueName="org.mate.Marco.general.num-workspaces"
-	presentation="$(presentation.num-workspaces)">
+      	valueName="org.mate.Marco.general.num-workspaces"
+	      presentation="$(presentation.num-workspaces)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -1078,7 +1074,7 @@
         explainText="$(string.theme_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.Marco.general.theme"
-	presentation="$(presentation.OrgMateMarcoGeneralTheme-pr)">
+       	presentation="$(presentation.OrgMateMarcoGeneralTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -1108,7 +1104,7 @@
         explainText="$(string.gtk-theme_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.interface.gtk-theme"
-	presentation="$(presentation.OrgMateInterfaceGtkTheme-pr)">
+      	presentation="$(presentation.OrgMateInterfaceGtkTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>
@@ -1121,7 +1117,7 @@
         explainText="$(string.icon-theme_help)"
         key="Software\BaseALT\Policies\gsettings"
         valueName="org.mate.interface.icon-theme"
-	presentation="$(presentation.OrgMateInterfaceIconTheme-pr)">
+      	presentation="$(presentation.OrgMateInterfaceIconTheme-pr)">
       <parentCategory ref="system:ALT_Graphics" />
       <supportedOn ref="system:SUPPORTED_AltP9" />
       <elements>

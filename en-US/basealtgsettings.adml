@@ -5,53 +5,54 @@
   <description>This file contains the gsettings services definitions used by ALT operating system.</description>
   <resources>
     <stringTable>
-      <string id="idle-activation-enabled">idle-activation-enabled</string>
-      <string id="idle-activation-enabled_help">Установите значение TRUE, чтобы хранитель экрана включался, когда сеанс неактивен.
+      <string id="idle-activation-enabled">Activate when idle</string>
+      <string id="idle-activation-enabled_help">Set this to TRUE to activate the screensaver when the session is idle.
 
 True - хранитель экрана включается, когда сеанс неактивен
 
 False - хранитель экрана отключен
       </string>
-      <string id="lock-enabled">Возможность выхода из системы при включенном хранителе экрана</string>
-      <string id="lock-enabled_help">Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась возможность выхода из системы.
-      </string>
 
-      <string id="lock-delay">Количество минут после активации хранителя экрана, по истечении которых экран будет заблокирован.</string>
-      <string id="lock-delay_help">Установите количество минут по истечении которых экран будет заблокирован</string>
+      <string id="lock-enabled">Lock on activation</string>
+      <string id="lock-enabled_help">Set this to TRUE to lock the screen when the screensaver goes active.</string>
 
-      <string id="logout-delay">Интервал в минутах между активацией хранителя экрана и появлением параметра выхода из сеанса в диалоге</string>
-      <string id="logout-delay_help">Установите количество минут, через которое после активации хранителя экрана будет появляться диалог выхода из сеанса</string>
+      <string id="lock-delay">Time before locking</string>
+      <string id="lock-delay_help">The number of minutes after screensaver activation before locking the screen.</string>
 
-      <string id="cycle-delay">Интервал между сменами тем хранителя экрана в минутах.</string>
-      <string id="cycle-delay_help">Установите интервал в минутах между сменами тем хранителя экрана.</string>
+      <string id="logout-delay">Time before locking</string>
+      <string id="logout-delay_help">The number of minutes after screensaver activation before locking the screen.</string>
 
-      <string id="embedded-keyboard-command">Команда, которая должна выполняться, если установлено значение TRUE для ключа «embedded_keyboard_enabled»,.
-      чтобы встроить виджет клавиатуры в окно. Команда должна реализовать интерфейс подключения XEMBED и выводить XID окна на стандартный вывод.</string>
-      <string id="embedded-keyboard-command_help">Введите команду, реализующую интерфейс подключения XEMBED и выводящую XID окна на стандартный вывод</string>
+      <string id="cycle-delay">Time before theme change</string>
+      <string id="cycle-delay_help">The number of minutes to run before changing the screensaver theme.</string>
 
-      <string id="power-management-delay">!!!OrgMateScreensaverPowerManagementDelay</string>
-      <string id="power-management-delay_help">!!!OrgMateScreensaverPowerManagementDelay</string>
+      <string id="embedded-keyboard-command">Embedded keyboard command</string>
+      <string id="embedded-keyboard-command_help">The command that will be run, if the "embedded_keyboard_enabled" key is set to TRUE, to embed a keyboard widget into the window. This command should implement an XEMBED plug interface and output a window XID on the standard output.</string>
 
-      <string id="lock-hibernate">Возможность блокировать экран после восстановления компьютера из спящего режима. Используется только в случае, если не.
-      установлен параметр lock-use-screensaver.</string>
-      <string id="lock-hibernate_help">Установите значение TRUE, чтобы блокировать компьютер после восстановления из спящего режима.
+      <string id="power-management-delay">Time before power management baseline</string>
+      <string id="power-management-delay_help">The number of seconds of inactivity before signalling to power management. This key is set and maintained by the session power management agent.</string>
+
+      <string id="lock-hibernate">Lock screen on hibernate</string>
+      <string id="lock-hibernate_help">Whether the screen is locked when the computer wakes up from a hibernate. Only used if lock-use-screensaver is false.
 
 True - блокировать компьютер после восстановления из спящего режима
 
 False - отключить блокировку компьютера при восстановлении их спящего режима
 </string>
-    <string id="sleep-computer-ac">Время бездействия в секундах, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
-    <string id="sleep-computer-ac_help">Установите время бездействия компьютера, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
 
-    <string id="button-suspend">Действие, выполняемое при нажатой кнопке ждущего режима.</string>
-    <string id="button-suspend_help">Установите действие, выполняемое при нажатии кнопки ждущего режима
+      <string id="sleep-computer-ac">Sleep timeout computer when on AC</string>
+      <string id="sleep-computer-ac_help">The amount of time in seconds the computer on AC power needs to be inactive before it goes to sleep.</string>
 
-      blank - !!!ничего не делать, suspend - переход в спящий режим,
+      <sting id="button-suspend">Suspend button action</string>
+      <sting id="button-suspend_help">The action to take when the system suspend button is pressed.
 
-      shutdown - выключение компьютера, hibernate - переход в режим гибернации,
+      blank - !!!ничего не делать, 
+      suspend - переход в спящий режим,
+
+      shutdown - выключение компьютера, 
+      hibernate - переход в режим гибернации,
 
       interactive - спросить, что необходимо сделать,
-      
+
       nothing - ничего не делать</string>
 	<string id="button-suspend_blank">Черный экран</string>
 	<string id="button-suspend_suspend">спящий режим</string>
@@ -60,11 +61,18 @@ False - отключить блокировку компьютера при во
 	<string id="button-suspend_interactive">спросить</string>
 	<string id="button-suspend_nothing">ничего не делать</string>
 
-      <string id="sleep-display-ac">Время бездействия компьютера, по истечении которого, дисплей будет отключен при питании от сети</string>
-      <string id="sleep-display-ac_help">Установите время бездействия в секундах, по истечении которого дисплей будет отключен при питании от сети </string>
+        <string id="button-suspend_blank">Черный экран</string>
+        <string id="button-suspend_suspend">спящий режим</string>
+        <string id="button-suspend_shutdown">выключение</string>
+        <string id="button-suspend_hibernate">гибернация</string>
+        <string id="button-suspend_interactive">спросить</string>
+        <string id="button-suspend_nothing">ничего не делать</string>
 
-      <string id="icon-policy">Опции для иконки уведомления</string>
-      <string id="icon-policy_help">В каких случаях показать уведомление о состоянии питания.
+      <string id="sleep-display-ac">Sleep timeout display when on AC</string>
+      <string id="sleep-display-ac_help">The amount of time in seconds before the display goes to sleep when the computer is on AC power.</string>
+
+      <string id="icon-policy">When to show the notification icon</string>
+      <string id="icon-policy_help">Display options for the notification icon.
 
       always - показывать уведомление всегда
 
@@ -77,11 +85,12 @@ False - отключить блокировку компьютера при во
       critical - показывать уведомление при критическом заряде батареи
 
       never - никогда не показывать уведмление</string>
-	<string id="icon-policy_never">никогда</string>
-	<string id="icon-policy_low">при низком заряде</string>
-	<string id="icon-policy_charge">при зарядке</string>
-	<string id="icon-policy_present">при питании от сети</string>
-	<string id="icon-policy_always">всегда</string>
+
+      <string id="icon-policy_never">никогда</string>
+      <string id="icon-policy_low">при низком заряде</string>
+      <string id="icon-policy_charge">при зарядке</string>
+      <string id="icon-policy_present">при питании от сети</string>
+      <string id="icon-policy_always">всегда</string>
 
       <string id="idle-delay"> !!!</string>
       <string id="idle-delay_help"> !!!</string>
@@ -103,22 +112,25 @@ False - отключить блокировку компьютера при во
       the connection. Recommended especially when access is not password protected.</string>
       <string id="promt-enabled_help"> !!!</string>
 
-      <string id="view-only">If true, remote users accessing the desktop are only allowed to view the desktop..
-      Remote users will not be able to use the mouse or keyboard. </string>
-      <string id="view-only_help"> !!!</string>
+      <string id="orientation">Panel orientation</string>
+      <string id="orientation_help">The orientation of the panel. Possible values are "top", "bottom", "left", "right". In expanded mode the key specifies which screen edge the panel is on. In un-expanded mode the difference between "top" and "bottom" is less important - both indicate that this is a horizontal panel - but still give a useful hint as to how some panel objects should behave. For example, on a "top" panel a menu button will pop up its menu below the panel, whereas on a "bottom" panel the menu will be popped up above the panel.</string>
 
-      <string id="enabled">If "true" allows remote access to desktop via the RFB protocol. Users on remote machines may then connect to the desktop using a VNC player</string>
-      <string id="enabled_help">help!!! </string>
+      <string id="view-only">view-only</string>
+      <string id="view-only_help">If true, remote users accessing the desktop are only allowed to view the desktop..
+      Remote users will not be able to use the mouse or keyboard.</string>
 
-      <string id="icon-visibility">This key controls the behavior of the status icon. There are three options: "always" - the icon will always be present;.
-      "client" - the icon will only be present when someone is connected (this is the default behavior); "never" - the icon will not be present </string>
-      <string id="icon-visibility_help">!!!OrgMatePowerManagerButtonPower</string>
-	<string id="icon-visibility_client">!!!client</string>
-	<string id="icon-visibility_always">!!!!always</string>
-	<string id="icon-visibility_never">!!!!!never</string>
+      <string id="enabled">enabled</string>
+      <string id="enabled_help">If "true" allows remote access to desktop via the RFB protocol. Users on remote machines may then connect to the desktop using a VNC player</string>
 
-      <string id="button-power"> !!!</string>
-      <string id="button-power_help"> </string>
+      <string id="icon-visibility">icon-visibility</string>
+      <string id="icon-visibility_help">This key controls the behavior of the status icon. There are three options:</string>
+         <string id="icon-visibility_client">"client" - the icon will only be present when someone is connected (this is the default behavior);</string>
+         <string id="icon-visibility_always">"always" - the icon will always be present;</string>
+         <string id="icon-visibility_never">"never" - the icon will not be present</string>
+
+      <string id="button-power">Power button action</string>
+      <string id="button-power_help">The action to take when the system power button is pressed.</string>
+
 	<string id="button-power_nothing">ничего не делать</string>
 	<string id="button-power_suspend">спящий режим</string>
 	<string id="button-power_hibernate">гибернация</string>
@@ -143,22 +155,22 @@ False - отключить блокировку компьютера при во
 	<string id="themes">!!!OrgMateScreensaverThemes</string>
 	<string id="themes_help">!!!OrgMateScreensaverThemes</string>
 
-      <string id="use-upnp">If true, request that a UPnP-capable router should forward and open the port used by Vino.</string>
-      <string id="use-upnp_help">!!!!</string>
+      <string id="use-upnp">use-upnp</string>
+      <string id="use-upnp_help">If true, request that a UPnP-capable router should forward and open the port used by Vino.</string>
 
 	<string id="button-layout">!!!button-layout</string>
 	<string id="button-layout_help">!!!button-layout</string>
 
-      <string id="num-workespaces">Количество рабочих областей.</string>
+      <string id="num-workespaces">Number of workspaces</string>
       <string id="num-workspaces_help">Number of workspaces. Must be more than zero, and has a fixed maximum(36) to prevent making the desktop unusable by.
       accidentally asking for too many workspaces.</string>
 	
 	<string id="theme">!!!!OrgMateMarcoGeneralTheme</string>
 	<string id="theme_help">!!!!OrgMateMarcoGeneralTheme</string>
 
-      <string id="visual-bell">Turns on a visual indication when an application or the system issues a 'bell' or 'beep'; useful for the hard-of-hearing.
+      <string id="visual-bell">visual-bell</string>
+      <string id="visual-bell_help">Turns on a visual indication when an application or the system issues a 'bell' or 'beep'; useful for the hard-of-hearing.
       and for use in noisy environments.</string>
-      <string id="visual-bell_help">visual-bell_help</string>
 
 	<string id="gtk-theme">!!!!org.mate.interface.gtk-theme</string>
 	<string id="gtk-theme_help">!!!!org.mate.interface.gtk-theme-help</string>

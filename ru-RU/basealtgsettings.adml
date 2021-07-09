@@ -141,6 +141,7 @@ False - отключить блокировку компьютера при во
 	<string id="mode_random">random</string>
 	<string id="mode_single">single</string>
 
+
 	<string id="themes">!!!OrgMateScreensaverThemes</string>
 	<string id="themes_help">!!!OrgMateScreensaverThemes</string>
 
