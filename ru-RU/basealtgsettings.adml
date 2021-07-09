@@ -80,7 +80,6 @@ False - хранитель экрана отключен
 	<string id="icon-policy_present">при питании от сети</string>
 	<string id="icon-policy_always">всегда</string>
 
-<<<<<<< HEAD
       <string id="idle-delay">Интервал бездействия, по истечении которого сеанс считается простаивающим</string>
       <string id="idle-delay_help">Установите время бездействия, по истечении которого сеанс считается простаивающим</string>
 
@@ -114,44 +113,6 @@ False - хранитель экрана отключен
 
       <string id="button-power">Действие, при нажатии кнопки питания</string>
       <string id="button-power_help">Утсановите действие, выполняемое при нажатии кнопки питания</string>
-=======
-      <string id="idle-delay"> OrgMateSessionIdleDelayUser</string>
-      <string id="idle-delay_help"> OrgMateSessionIdleDelayUser</string>
-
-      <string id="picture-filename">OrgMateBackgroundPictureFilenameUser</string>
-      <string id="picture-filename_help">OrgMateBackgroundPictureFilenameUser</string>
-
-      <string id="Wallpaper"> Wallpaper option!!!</string>
-      <string id="Wallpaper_help">Wallpaper options help!!!</string>
-	<string id= "WallpaperStyle_None">!!!none</string>
-	<string id= "WallpaperStyle_Wallpaper">wallpaper!!!</string>
-	<string id= "WallpaperStyle_Centered">!!!Centered</string>
-	<string id= "WallpaperStyle_Scaled">!!!Scaled</string>
-	<string id= "WallpaperStyle_Stretched">!!!Stretched</string>
-	<string id= "WallpaperStyle_Zoom">!!!Zoom</string>
-	<string id= "WallpaperStyle_Spanned">!!!!Spanned</string>
-
-      <string id="prompt-enabled">If true, remote users accessing the desktop are not allowed access until the user on the host machine approves.
-      the connection. Recommended especially when access is not password protected.</string>
-      <string id="prompt-enabled_help"> !!!</string>
-
-      <string id="view-only">If true, remote users accessing the desktop are only allowed to view the desktop..
-      Remote users will not be able to use the mouse or keyboard. </string>
-      <string id="view-only_help"> !!!</string>
-
-      <string id="enabled">If "true" allows remote access to desktop via the RFB protocol. Users on remote machines may then connect to the desktop using a VNC player</string>
-      <string id="enabled_help">help!!! </string>
-
-      <string id="icon-visibility">This key controls the behavior of the status icon. There are three options: "always" - the icon will always be present;.
-      "client" - the icon will only be present when someone is connected (this is the default behavior); "never" - the icon will not be present </string>
-      <string id="icon-visibility_help">!!!OrgMatePowerManagerButtonPower</string>
-	<string id="icon-visibility_client">!!!client</string>
-	<string id="icon-visibility_always">!!!!always</string>
-	<string id="icon-visibility_never">!!!!!never</string>
-
-      <string id="button-power">button-power!!!</string>
-      <string id="button-power_help"> </string>
->>>>>>> b4d5c69122f5d389c60ba9ee948971414d472535
 	<string id="button-power_nothing">ничего не делать</string>
 	<string id="button-power_suspend">спящий режим</string>
 	<string id="button-power_hibernate">гибернация</string>
@@ -168,17 +129,10 @@ False - хранитель экрана отключен
       single - при активации хранителя экрана используется тема, указанная ключом "темы"
 
       random - при активации хранителя экрана используется случайно выбранная тема</string>
-<<<<<<< HEAD
 	<string id="mode_disabled">выключено</string>
 	<string id="mode_blank_only">черный экран</string>
 	<string id="mode_random">случайно</string>
 	<string id="mode_single">выбранная тема</string>
-=======
-	<string id="mode_disabled">disabled</string>
-	<string id="mode_blank_only">blank-only</string>
-	<string id="mode_random">random</string>
-	<string id="mode_single">single</string>
->>>>>>> b4d5c69122f5d389c60ba9ee948971414d472535
 
 
 	<string id="themes">Выбор темы для хранителя экрана</string>
@@ -305,11 +259,7 @@ False - хранитель экрана отключен
 
       <presentation id="OrgMateBackgroundPictureFilename-pr">
         <textBox refId="OrgMateBackgroundPictureFilename_setter">
-<<<<<<< HEAD
 		<label>Картинка для фона рабочего стола:</label>
-=======
-		<label>!!!OrgMateBackgroundPictureFilename</label>
->>>>>>> b4d5c69122f5d389c60ba9ee948971414d472535
 	</textBox>	
       </presentation>
 
