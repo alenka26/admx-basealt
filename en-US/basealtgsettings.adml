@@ -86,6 +86,9 @@ False - отключить блокировку компьютера при во
       <string id="idle-delay"> !!!</string>
       <string id="idle-delay_help"> !!!</string>
 
+      <string id="picture-filename">OrgMateBackgroundPictureFilenameUser</string>
+      <string id="picture-filename_help">OrgMateBackgroundPictureFilenameUser</string>
+
       <string id="Wallpaper"> Wallpaper option!!!</string>
       <string id="Wallpaper_help">Wallpaper options help!!!</string>
 	<string id= "WallpaperStyle_None">!!!none</string>
@@ -260,6 +263,12 @@ False - отключить блокировку компьютера при во
       <presentation id="OrgMatePowerManagerIconPolicy-pr">
         <dropdownList noSort="true" defaultItem="0" refId="OrgMatePowerManagerIconPolicy_setter">Select an operating mode:
         </dropdownList>
+      </presentation>
+
+      <presentation id="OrgMateBackgroundPictureFilename-pr">
+        <textBox refId="OrgMateBackgroundPictureFilename_setter">
+		<label>!!!OrgMateBackgroundPictureFilename</label>
+	</textBox>	
       </presentation>
 
       <presentation id="OrgMateBackgroundPictureOptions-pr">

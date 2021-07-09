@@ -36,6 +36,12 @@
 
       <string id="LinuxComponents">Компоненты Linux</string>
       <string id="LinuxComponents_Help">Содержит настройки ядра операционной системы.</string>
+      <string id="ALT_PowerManagement">Электропитание</string>
+      <string id="ALT_PowerManagement_Help">Содержит настройки электропитания</string>
+      <string id="ALT_Screensaver">Хранитель экрана</string>
+      <string id="ALT_Screensaver_Help">Настройки хранителя экрана</string>
+      <string id="ALT_Vino">Vino</string>
+      <string id="ALT_Vino_Help">Настройки Vino</string>
     </stringTable>
   </resources>
 </policyDefinitionResources>

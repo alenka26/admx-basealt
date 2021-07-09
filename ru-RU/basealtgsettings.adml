@@ -83,8 +83,11 @@ False - отключить блокировку компьютера при во
 	<string id="icon-policy_present">при питании от сети</string>
 	<string id="icon-policy_always">всегда</string>
 
-      <string id="idle-delay"> !!!</string>
-      <string id="idle-delay_help"> !!!</string>
+      <string id="idle-delay"> OrgMateSessionIdleDelayUser</string>
+      <string id="idle-delay_help"> OrgMateSessionIdleDelayUser</string>
+
+      <string id="picture-filename">OrgMateBackgroundPictureFilenameUser</string>
+      <string id="picture-filename_help">OrgMateBackgroundPictureFilenameUser</string>
 
       <string id="Wallpaper"> Wallpaper option!!!</string>
       <string id="Wallpaper_help">Wallpaper options help!!!</string>
@@ -96,9 +99,9 @@ False - отключить блокировку компьютера при во
 	<string id= "WallpaperStyle_Zoom">!!!Zoom</string>
 	<string id= "WallpaperStyle_Spanned">!!!!Spanned</string>
 
-      <string id="promt-enabled">If true, remote users accessing the desktop are not allowed access until the user on the host machine approves.
+      <string id="prompt-enabled">If true, remote users accessing the desktop are not allowed access until the user on the host machine approves.
       the connection. Recommended especially when access is not password protected.</string>
-      <string id="promt-enabled_help"> !!!</string>
+      <string id="prompt-enabled_help"> !!!</string>
 
       <string id="view-only">If true, remote users accessing the desktop are only allowed to view the desktop..
       Remote users will not be able to use the mouse or keyboard. </string>
@@ -114,7 +117,7 @@ False - отключить блокировку компьютера при во
 	<string id="icon-visibility_always">!!!!always</string>
 	<string id="icon-visibility_never">!!!!!never</string>
 
-      <string id="button-power"> !!!</string>
+      <string id="button-power">button-power!!!</string>
       <string id="button-power_help"> </string>
 	<string id="button-power_nothing">ничего не делать</string>
 	<string id="button-power_suspend">спящий режим</string>
@@ -133,9 +136,10 @@ False - отключить блокировку компьютера при во
       single - при активации хранителя экрана используется тема, указанная ключом "темы"
 
       random - при активации хранителя экрана используется случайно выбранная тема</string>
-	<string id="mode_blank_only">OrgMateScreensaverMode!!!</string>
-	<string id="mode_random">OrgMateScreensaverMode!!!!</string>
-	<string id="mode_single">OrgMateScreensaverMode!!!!!</string>
+	<string id="mode_disabled">disabled</string>
+	<string id="mode_blank_only">blank-only</string>
+	<string id="mode_random">random</string>
+	<string id="mode_single">single</string>
 
 	<string id="themes">!!!OrgMateScreensaverThemes</string>
 	<string id="themes_help">!!!OrgMateScreensaverThemes</string>
@@ -260,6 +264,12 @@ False - отключить блокировку компьютера при во
       <presentation id="OrgMatePowerManagerIconPolicy-pr">
         <dropdownList noSort="true" defaultItem="0" refId="OrgMatePowerManagerIconPolicy_setter">Select an operating mode:
         </dropdownList>
+      </presentation>
+
+      <presentation id="OrgMateBackgroundPictureFilename-pr">
+        <textBox refId="OrgMateBackgroundPictureFilename_setter">
+		<label>!!!OrgMateBackgroundPictureFilename</label>
+	</textBox>	
       </presentation>
 
       <presentation id="OrgMateBackgroundPictureOptions-pr">
