@@ -85,6 +85,15 @@
     <category name="ALT_Databases" displayName="$(string.ALT_Databases)" explainText="$(string.ALT_Databases_Help)">
       <parentCategory ref="ALT_System" />
     </category>
-    <category name="LinuxComponents" displayName="$(string.LinuxComponents)" explainText="$(string.LinuxComponents_Help)" />
+    <category name="LinuxComponents" displayName="$(string.LinuxComponents)" explainText="$(string.LinuxComponents_Help)"/>
+    <category name="ALT_PowerManagement" displayName="$(string.ALT_PowerManagement)" explainText="$(string.ALT_PowerManagement_Help)" >
+      <parentCategory ref="ALT_System" />
+    </category>
+    <category name="ALT_Screensaver" displayName="$(string.ALT_Screensaver)" explainText="$(string.ALT_Screensaver_Help)" >
+      <parentCategory ref="ALT_System" />
+    </category>
+    <category name="ALT_Vino" displayName="$(string.ALT_Vino)" explainText="$(string.ALT_Vino_Help)">
+      <parentCategory ref="ALT_System" />
+    </category>
   </categories>
 </policyDefinitions>
