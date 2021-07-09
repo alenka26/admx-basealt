@@ -13,38 +13,38 @@ True - хранитель экрана включается, когда сеан
 False - хранитель экрана отключен
       </string>
       <string id="lock-enabled">Возможность выхода из системы при включенном хранителе экрана</string>
-      <sting id="lock-enabled_help">Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась возможность выхода из системы.
+      <string id="lock-enabled_help">Установите значение TRUE, чтобы к диалогу разблокирования экрана  добавилась возможность выхода из системы.
       </string>
 
-      <string id="lock-delay"> Количество минут после активации хранителя экрана, по истечении которых экран будет заблокирован.</string>
-      <string id="lock-delay_help"> Установите количество минут по истечении которых экран будет заблокирован</string>
+      <string id="lock-delay">Количество минут после активации хранителя экрана, по истечении которых экран будет заблокирован.</string>
+      <string id="lock-delay_help">Установите количество минут по истечении которых экран будет заблокирован</string>
 
-      <string id="logout-delay"> Интервал в минутах между активацией хранителя экрана и появлением параметра выхода из сеанса в диалоге</string>
-      <string id="logout-delay_help"> Установите количество минут, через которое после активации хранителя экрана будет появляться диалог выхода из сеанса</string>
+      <string id="logout-delay">Интервал в минутах между активацией хранителя экрана и появлением параметра выхода из сеанса в диалоге</string>
+      <string id="logout-delay_help">Установите количество минут, через которое после активации хранителя экрана будет появляться диалог выхода из сеанса</string>
 
-      string id="cycle-delay"> Интервал между сменами тем хранителя экрана в минутах.</string>
-      string id="cycle-delay_help"> Установите интервал в минутах между сменами тем хранителя экрана.</string>
+      <string id="cycle-delay">Интервал между сменами тем хранителя экрана в минутах.</string>
+      <string id="cycle-delay_help">Установите интервал в минутах между сменами тем хранителя экрана.</string>
 
-      <string id="embedded-keyboard-command"> Команда, которая должна выполняться, если установлено значение TRUE для ключа «embedded_keyboard_enabled»,.
+      <string id="embedded-keyboard-command">Команда, которая должна выполняться, если установлено значение TRUE для ключа «embedded_keyboard_enabled»,.
       чтобы встроить виджет клавиатуры в окно. Команда должна реализовать интерфейс подключения XEMBED и выводить XID окна на стандартный вывод.</string>
-      <string id="embedded-keyboard-command_help"> Введите команду, реализующую интерфейс подключения XEMBED и выводящую XID окна на стандартный вывод</string>
+      <string id="embedded-keyboard-command_help">Введите команду, реализующую интерфейс подключения XEMBED и выводящую XID окна на стандартный вывод</string>
 
-      <string id="power-management-delay"> </string>
-      <string id="power-management-delay_help"> </string>
+      <string id="power-management-delay">!!!OrgMateScreensaverPowerManagementDelay</string>
+      <string id="power-management-delay_help">!!!OrgMateScreensaverPowerManagementDelay</string>
 
-      <string id="lock-hibernate"> Возможность блокировать экран после восстановления компьютера из спящего режима. Используется только в случае, если не.
+      <string id="lock-hibernate">Возможность блокировать экран после восстановления компьютера из спящего режима. Используется только в случае, если не.
       установлен параметр lock-use-screensaver.</string>
-      <string id="lock-hibernate_help"> Установите значение TRUE, чтобы блокировать компьютер после восстановления из спящего режима.
+      <string id="lock-hibernate_help">Установите значение TRUE, чтобы блокировать компьютер после восстановления из спящего режима.
 
 True - блокировать компьютер после восстановления из спящего режима
 
 False - отключить блокировку компьютера при восстановлении их спящего режима
 </string>
-    <string id="sleep-computer-ac"> Время бездействия в секундах, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
-    <string id="sleep-computer-ac_help"> Установите время бездействия компьютера, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
+    <string id="sleep-computer-ac">Время бездействия в секундах, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
+    <string id="sleep-computer-ac_help">Установите время бездействия компьютера, по истечении которого компьютер переходит в спящий режим при питании от сети</string>
 
-    <sting id="button-suspend"> Действие, выполняемое при нажатой кнопке ждущего режима.</string>
-    <sting id="button-suspend_help"> Установите действие, выполняемое при нажатии кнопки ждущего режима
+    <string id="button-suspend">Действие, выполняемое при нажатой кнопке ждущего режима.</string>
+    <string id="button-suspend_help">Установите действие, выполняемое при нажатии кнопки ждущего режима
 
       blank - !!!ничего не делать, suspend - переход в спящий режим,
 
@@ -53,12 +53,18 @@ False - отключить блокировку компьютера при во
       interactive - спросить, что необходимо сделать,
       
       nothing - ничего не делать</string>
+	<string id="button-suspend_blank">Черный экран</string>
+	<string id="button-suspend_suspend">спящий режим</string>
+	<string id="button-suspend_shutdown">выключение</string>
+	<string id="button-suspend_hibernate">гибернация</string>
+	<string id="button-suspend_interactive">спросить</string>
+	<string id="button-suspend_nothing">ничего не делать</string>
 
       <string id="sleep-display-ac">Время бездействия компьютера, по истечении которого, дисплей будет отключен при питании от сети</string>
       <string id="sleep-display-ac_help">Установите время бездействия в секундах, по истечении которого дисплей будет отключен при питании от сети </string>
 
-      <string id="icon-policy"> Опции для иконки уведомления</string>
-      <string id="icon-policy_help"> В каких случаях показать уведомление о состоянии питания.
+      <string id="icon-policy">Опции для иконки уведомления</string>
+      <string id="icon-policy_help">В каких случаях показать уведомление о состоянии питания.
 
       always - показывать уведомление всегда
 
@@ -71,39 +77,57 @@ False - отключить блокировку компьютера при во
       critical - показывать уведомление при критическом заряде батареи
 
       never - никогда не показывать уведмление</string>
+	<string id="icon-policy_never">никогда</string>
+	<string id="icon-policy_low">при низком заряде</string>
+	<string id="icon-policy_charge">при зарядке</string>
+	<string id="icon-policy_present">при питании от сети</string>
+	<string id="icon-policy_always">всегда</string>
 
-      <string id="idle-delay"> !!!</string>
-      <string id="idle-delay_help"> !!!</string>
+      <string id="idle-delay"> OrgMateSessionIdleDelayUser</string>
+      <string id="idle-delay_help"> OrgMateSessionIdleDelayUser</string>
 
-      <string id="Wallpaper"> !!!</string>
-      <string id="Wallpaper_Help">!!!</string>
+      <string id="picture-filename">OrgMateBackgroundPictureFilenameUser</string>
+      <string id="picture-filename_help">OrgMateBackgroundPictureFilenameUser</string>
 
-      <string id="promt-enabled"> If true, remote users accessing the desktop are not allowed access until the user on the host machine approves.
+      <string id="Wallpaper"> Wallpaper option!!!</string>
+      <string id="Wallpaper_help">Wallpaper options help!!!</string>
+	<string id= "WallpaperStyle_None">!!!none</string>
+	<string id= "WallpaperStyle_Wallpaper">wallpaper!!!</string>
+	<string id= "WallpaperStyle_Centered">!!!Centered</string>
+	<string id= "WallpaperStyle_Scaled">!!!Scaled</string>
+	<string id= "WallpaperStyle_Stretched">!!!Stretched</string>
+	<string id= "WallpaperStyle_Zoom">!!!Zoom</string>
+	<string id= "WallpaperStyle_Spanned">!!!!Spanned</string>
+
+      <string id="prompt-enabled">If true, remote users accessing the desktop are not allowed access until the user on the host machine approves.
       the connection. Recommended especially when access is not password protected.</string>
-      <string id="promt-enabled_help"> !!!</string>
-
-      <string id="orientation"> Список идентификаторов панелей. Каждый идентификатор соответствует своей отдельной панели верхнего уровня..
-      Параметры каждой из этих панелей хранятся в /apps/panel/toplevels/$(id).</string>
-      <string id="orientation_help"> !!!</string>
+      <string id="prompt-enabled_help"> !!!</string>
 
       <string id="view-only">If true, remote users accessing the desktop are only allowed to view the desktop..
       Remote users will not be able to use the mouse or keyboard. </string>
       <string id="view-only_help"> !!!</string>
 
-      <string id="enabled"> This key controls the behavior of the status icon. There are three options: "always" - the icon will always be present;.
-      "client" - the icon will only be present when someone is connected (this is the default behavior); "never" - the icon will not be present</string>
-      <string id="enabled_help"> </string>
+      <string id="enabled">If "true" allows remote access to desktop via the RFB protocol. Users on remote machines may then connect to the desktop using a VNC player</string>
+      <string id="enabled_help">help!!! </string>
 
       <string id="icon-visibility">This key controls the behavior of the status icon. There are three options: "always" - the icon will always be present;.
       "client" - the icon will only be present when someone is connected (this is the default behavior); "never" - the icon will not be present </string>
-      <string id="icon-visibility_help"> </string>
+      <string id="icon-visibility_help">!!!OrgMatePowerManagerButtonPower</string>
+	<string id="icon-visibility_client">!!!client</string>
+	<string id="icon-visibility_always">!!!!always</string>
+	<string id="icon-visibility_never">!!!!!never</string>
 
-      <string id="button-power"> </string>
+      <string id="button-power">button-power!!!</string>
       <string id="button-power_help"> </string>
+	<string id="button-power_nothing">ничего не делать</string>
+	<string id="button-power_suspend">спящий режим</string>
+	<string id="button-power_hibernate">гибернация</string>
+	<string id="button-power_shutdown">выключение</string>
+	<string id="button-power_interactive">спросить</string>
       
       <string id="mode">Режим выбора, используемый хранителем экрана. Возможные варианты: «disabled» — отключён, «blank-only» — чёрный экран,.
       «single» — использовать одну тему, указанную ключом «темы», «random» — использовать случайно выбранную тему.</string>
-      <string id="mode_help"> Установить режим работы хранителя экрана.
+      <string id="mode_help">Установить режим работы хранителя экрана.
 
       diasabled - хранитель экрана отключен
 
@@ -112,50 +136,158 @@ False - отключить блокировку компьютера при во
       single - при активации хранителя экрана используется тема, указанная ключом "темы"
 
       random - при активации хранителя экрана используется случайно выбранная тема</string>
+	<string id="mode_disabled">disabled</string>
+	<string id="mode_blank_only">blank-only</string>
+	<string id="mode_random">random</string>
+	<string id="mode_single">single</string>
+
+
+	<string id="themes">!!!OrgMateScreensaverThemes</string>
+	<string id="themes_help">!!!OrgMateScreensaverThemes</string>
 
       <string id="use-upnp">If true, request that a UPnP-capable router should forward and open the port used by Vino.</string>
-      <string id="use-upnp_help"> !!!!</string>
+      <string id="use-upnp_help">!!!!</string>
 
-      <string id="num-workespaces"> Количество рабочих областей.</string>
+	<string id="button-layout">!!!button-layout</string>
+	<string id="button-layout_help">!!!button-layout</string>
+
+      <string id="num-workespaces">Количество рабочих областей.</string>
       <string id="num-workspaces_help">Number of workspaces. Must be more than zero, and has a fixed maximum(36) to prevent making the desktop unusable by.
       accidentally asking for too many workspaces.</string>
+	
+	<string id="theme">!!!!OrgMateMarcoGeneralTheme</string>
+	<string id="theme_help">!!!!OrgMateMarcoGeneralTheme</string>
 
       <string id="visual-bell">Turns on a visual indication when an application or the system issues a 'bell' or 'beep'; useful for the hard-of-hearing.
       and for use in noisy environments.</string>
-      <string id="visual-bell_help"> </string>
+      <string id="visual-bell_help">visual-bell_help</string>
+
+	<string id="gtk-theme">!!!!org.mate.interface.gtk-theme</string>
+	<string id="gtk-theme_help">!!!!org.mate.interface.gtk-theme-help</string>
+
+	<string id="icon-theme">!!!!OrgMateInterfaceIconTheme</string>
+	<string id="icon-theme_help">!!!!OrgMateInterfaceIconTheme</string>
 
     </stringTable>
 
     <presentationTable>
-      <presentation id="button-power">
-        <dropdownList noSort="true" defaultItem="0" refId="button-power_setter">Выберите режим работы:
-        </dropdownList>
-      </presentation>
-      <presentation id="button-suspend">
-        <dropdownList noSort="true" defaultItem="0" refId="button-suspend_setter">Выберите режим работы:
-        </dropdownList>
-      </presentation>
-      <presentation id="icon-policy">
-        <dropdownList noSort="true" defaultItem="0" refId="icon-policy_setter">Выберите режим работы:
-        </dropdownList>
-      </presentation>
-      <presentation id="Wallpaper">
-        <dropdownList noSort="true" defaultItem="0" refId="Wallpaper_setter">Выберите режим работы:
-        </dropdownList>
-      </presentation>
-      <presentation id="icon-visibility">
-        <dropdownList noSort="true" defaultItem="0" refId="icon-visibility_setter">Выберите режим работы:
-        </dropdownList>
-      </presentation>
-      <presentation id="orientation">
-        <dropdownList noSort="true" defaultItem="0" refId="orientation_setter">Выберите режим работы:
-        </dropdownList>
-      </presentation>
-      <presentation id="mode">
-        <dropdownList noSort="true" defaultItem="0" refId="mode_setter">Выберите режим работы:
-        </dropdownList>
-      </presentation>
-     </presentationTable>
+	<presentation id="OrgMateScreensaverCycleDelay-pr">
+		<text>Интервал в минутах между сменами тем хранителя экрана</text>
+		<decimalTextBox refId="ScreenSaverCycleDelay_setter" defaultValue="2">Интервал смены тем хранителя в минутах</decimalTextBox>
+	</presentation>
+	
+	<presentation id="OrgMateScreensaverEmbeddedKeyboardCommand-pr">
+		<text>Команда для встраивания виджета клавиатруы в окно</text>
+		<textBox refId="EmbeddedKeyboardCommand_setter">
+			<label>Command:!!! </label>
+		</textBox>
+	</presentation>
 
+	<presentation id="OrgMateScreensaverLockDelay-pr">
+		<text>Интервал в минутах между активацией хранителя экрана и появлением диалога выхода из системы при активации</text>
+		<decimalTextBox refId="OrgMateScreensaverLockDelay_setter" defaultValue="2">Время в минутах</decimalTextBox>
+	</presentation>
+
+	<presentation id="OrgMateScreensaverLogoutDelay-pr">
+		<text>Количество минут, по истечении которого после активации хранителя экрана, экран будет заблоктрован</text>
+		<decimalTextBox refId="OrgMateScreensaverLogoutDelay_setter" defaultValue="3">Время в минутах</decimalTextBox>
+	</presentation>
+	
+	<presentation id="OrgMateScreensaverPowerManagementDelay-pr">
+		<text>Время в секундах, по прошествии которого система управления питанием получает сигнал о бездействии пользователя</text>
+		<decimalTextBox refId="OrgMateScreensaverPowerManagementDelay_setter" defaultValue="180">Время в минутах</decimalTextBox>
+	</presentation>
+	
+	<presentation id="OrgMatePowerManagerSleepComputerAc-pr">
+		<text>Какое время в секундах компьютер должен простаивать при питании от сети перед приостановкой</text>
+		<decimalTextBox refId="OrgMatePowerManagerSleepComputerAc_setter" defaultValue="300">Время в cекундах</decimalTextBox>
+	</presentation>
+
+	<presentation id="OrgMatePowerManagerSleepDisplayAc-pr">
+		<text>Какое время в секундах компьютер должен простаивать при питании от сети перед передотключением дисплея</text>
+		<decimalTextBox refId="OrgMatePowerManagerSleepDisplayAc_setter" defaultValue="240">Время в cекундах</decimalTextBox>
+	</presentation>
+
+	<presentation id="OrgMateSessionIdleDelay-pr">
+		<text>!!!OrgMateSessionIdleDelay</text>
+		<decimalTextBox refId="OrgMateSessionIdleDelay_setter">!!!</decimalTextBox>
+	</presentation>	
+
+	<presentation id="OrgMateScreensaverThemes-pr">
+		<textBox refId="OrgMateScreensaverThemes_setter">
+			<label> OrgMateScreensaverThemes_setter!!!OrgMateScreensaver</label>
+		</textBox>
+	</presentation>
+	
+	<presentation id="OrgMateMarcoGeneralButtonLayout-pr">
+		<textBox refId="OrgMateMarcoGeneralButtonLayout_setter">
+			<label> !!!!OrgMateMarcoGeneralButtonLayout_setter</label>
+		</textBox>
+	</presentation>
+	
+	<presentation id="num-workspaces">
+		<text>!!!</text>
+		<decimalTextBox refId="num-workspaces_setter">!!!</decimalTextBox>
+	</presentation>
+	
+	<presentation id="OrgMateMarcoGeneralTheme-pr">
+		<text>OrgMateMarcoGeneralTheme_setter!!!</text>
+		<textBox refId="OrgMateMarcoGeneralTheme_setter">
+			<label>OrgMateMarcoGeneralTheme_setter!!! </label>
+		</textBox>
+	</presentation>
+
+	<presentation id="OrgMateInterfaceGtkTheme-pr">
+		<text>!!!org.mate.interface.gtk-theme</text>
+		<textBox refId="OrgMateInterfaceGtkTheme">
+			<label>!!! org.mate.interface.gtk-theme</label>
+		</textBox>
+	</presentation>
+
+	<presentation id="OrgMateInterfaceIconTheme-pr">
+		<text>!!!OrgMateInterfaceIconTheme-</text>
+		<textBox refId="OrgMateInterfaceIconTheme">
+			<label>!!!OrgMateInterfaceIconTheme- </label>
+		</textBox>
+	</presentation>
+		
+
+      <presentation id="OrgMatePowerManagerButtonPower-pr">
+        <dropdownList noSort="true" defaultItem="0" refId="OrgMatePowerManagerButtonPower_setter">Select an operating mode:
+        </dropdownList>
+      </presentation>
+
+      <presentation id="OrgMatePowerManagerButtonSuspend-pr">
+        <dropdownList noSort="true" defaultItem="0" refId="OrgMatePowerManagerButtonSuspend_setter">Select an operating mode:
+        </dropdownList>
+      </presentation>
+
+      <presentation id="OrgMatePowerManagerIconPolicy-pr">
+        <dropdownList noSort="true" defaultItem="0" refId="OrgMatePowerManagerIconPolicy_setter">Select an operating mode:
+        </dropdownList>
+      </presentation>
+
+      <presentation id="OrgMateBackgroundPictureFilename-pr">
+        <textBox refId="OrgMateBackgroundPictureFilename_setter">
+		<label>!!!OrgMateBackgroundPictureFilename</label>
+	</textBox>	
+      </presentation>
+
+      <presentation id="OrgMateBackgroundPictureOptions-pr">
+	<dropdownList noSort="true" defaultItem="0" refId="OrgMateBackgroundPictureOptions_setter">Select wallpaper style:
+        </dropdownList>
+      </presentation>
+
+      <presentation id="OrgGnomeVinoIconVisibility-pr">
+        <dropdownList noSort="true" defaultItem="0" refId="OrgGnomeVinoIconVisibility">Select an operating mode:
+        </dropdownList>
+      </presentation>
+
+      <presentation id="OrgMateScreensaverMode-pr">
+        <dropdownList noSort="true" defaultItem="0" refId="OrgMateScreensaverMode_setter">Select an operating mode:
+        </dropdownList>
+      </presentation>
+
+     </presentationTable>
   </resources>
 </policyDefinitionResources>

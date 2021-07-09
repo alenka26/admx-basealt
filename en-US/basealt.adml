@@ -36,6 +36,12 @@
 
       <string id="LinuxComponents">Linux Components</string>
       <string id="LinuxComponents_Help">Contains settings for Kernel components.</string>
+      <string id="ALT_PowerManagement">Power supply</string>
+      <string id="ALT_PowerManagement_Help">Configuration of power supply</string>
+      <string id="ALT_Screensaver">Screensaver</string>
+      <string id="ALT_Screensaver_Help">Configuration of screensaver</string>
+      <string id="ALT_Vino">Vino</string>
+      <string id="ALT_Vino_Help">Настройки Vino</string>
     </stringTable>
   </resources>
 </policyDefinitionResources>
